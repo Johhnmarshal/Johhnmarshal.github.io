@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://johhnmarshal.github.io/sitemap.xml

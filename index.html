@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tobi John Olabode — Cloud FinOps Practitioner. Multi-cloud cost optimization across AWS, Azure & GCP. 25%+ cloud spend reductions, automated Power BI dashboards, governance frameworks, and engineering culture-building.">
+    <meta name="keywords" content="FinOps, Cloud Cost Optimization, AWS, Azure, GCP, Financial Forecasting, Power BI, Tobi Olabode">
+    <meta name="author" content="Tobi John Olabode">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Tobi John Olabode | Cloud FinOps Practitioner">
+    <meta property="og:description" content="Multi-cloud FinOps practitioner. 25%+ cloud spend reductions across AWS, Azure & GCP.">
+    <meta property="og:type" content="profile">
+    <meta property="og:locale" content="en_GB">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tobi John Olabode | Cloud FinOps Practitioner">
+    <meta name="twitter:description" content="Multi-cloud FinOps practitioner. 25%+ cloud spend reductions across AWS, Azure & GCP.">
+
+    <!-- Structured data: Person schema for richer search results -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Tobi John Olabode",
+      "jobTitle": "Cloud FinOps Practitioner",
+      "email": "mailto:oluwamarshal@gmail.com",
+      "url": "https://johhnmarshal.github.io",
+      "sameAs": [
+        "https://www.linkedin.com/in/tobiolabode",
+        "https://github.com/Johhnmarshal",
+        "https://medium.com/@tobiolabode"
+      ],
+      "alumniOf": [
+        { "@type": "CollegeOrUniversity", "name": "Cardiff University" },
+        { "@type": "CollegeOrUniversity", "name": "Ladoke Akintola University of Technology" }
+      ],
+      "knowsAbout": ["FinOps", "Cloud Cost Optimization", "AWS", "Azure", "GCP", "Power BI", "Terraform"],
+      "address": { "@type": "PostalAddress", "addressCountry": "GB" }
+    }
+    </script>
+
+    <title>Tobi John Olabode | Cloud FinOps Practitioner</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%2314b8a6%22/><text x=%2250%22 y=%2268%22 font-family=%22sans-serif%22 font-size=%2245%22 font-weight=%22700%22 fill=%22white%22 text-anchor=%22middle%22>T</text></svg>">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+        :root {
+            --accent: #14b8a6;
+            --accent-dim: #0d9488;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        /* Sticky navbar (h-20 = 80px) compensation when jumping via hash links */
+        section[id], header[id] { scroll-margin-top: 90px; }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .font-display {
+            font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+
+        /* Section heading underline */
+        .section-heading {
+            position: relative;
+            display: inline-block;
+        }
+        .section-heading::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 64px;
+            height: 3px;
+            background: linear-gradient(to right, #14b8a6, transparent);
+            border-radius: 3px;
+        }
+
+        /* Nav links */
+        .nav-link { position: relative; transition: color .2s ease; }
+        .nav-link:hover { color: #14b8a6; }
+        .nav-link.active { color: #14b8a6; }
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #14b8a6;
+            border-radius: 2px;
+        }
+
+        .glass {
+            background: rgba(15, 23, 42, 0.78);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+        }
+
+        .stat-number { font-variant-numeric: tabular-nums; }
+
+        /* Subtle grid background */
+        .data-grid {
+            background-image:
+                linear-gradient(rgba(20, 184, 166, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(20, 184, 166, 0.05) 1px, transparent 1px);
+            background-size: 48px 48px;
+        }
+
+        /* Soft glow behind hero */
+        .hero-glow {
+            position: absolute;
+            top: 0; left: 50%;
+            transform: translateX(-50%);
+            width: 720px; height: 480px;
+            background: radial-gradient(closest-side, rgba(20,184,166,0.18), transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .skill-pill {
+            transition: all .2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .skill-pill:hover {
+            transform: translateY(-2px);
+            border-color: rgba(20,184,166,0.5);
+            color: #5eead4;
+        }
+
+        .experience-card {
+            transition: transform .3s cubic-bezier(0.4,0,0.2,1), box-shadow .3s cubic-bezier(0.4,0,0.2,1), border-color .3s ease;
+        }
+        .experience-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(20,184,166,0.4);
+            box-shadow: 0 20px 40px -12px rgba(15,23,42,0.6);
+        }
+
+        .case-study {
+            transition: transform .35s cubic-bezier(0.4,0,0.2,1), border-color .35s ease, box-shadow .35s ease;
+        }
+        .case-study:hover {
+            transform: translateY(-6px);
+            border-color: rgba(20,184,166,0.5);
+            box-shadow: 0 30px 60px -20px rgba(15,23,42,0.7);
+        }
+        .case-study:hover .case-zoom {
+            transform: scale(1.04);
+        }
+        .case-zoom { transition: transform .6s cubic-bezier(0.2,0.8,0.2,1); }
+
+        .metric { font-weight: 700; color: #5eead4; }
+
+        /* Fade in on scroll */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity .7s ease-out, transform .7s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .modern-shadow {
+            box-shadow: 0 10px 30px -8px rgba(15,23,42,0.45),
+                        0 4px 10px -4px rgba(15,23,42,0.3);
+        }
+
+        /* Form */
+        .form-input {
+            background: rgba(15,23,42,0.6);
+            border: 1px solid rgba(51,65,85,0.7);
+            transition: border-color .2s ease, background .2s ease;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: #14b8a6;
+            background: rgba(15,23,42,0.9);
+            box-shadow: 0 0 0 3px rgba(20,184,166,0.15);
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 6px; }
+        ::-webkit-scrollbar-thumb:hover { background: #14b8a6; }
+
+        /* Reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 antialiased">
+
+    <!-- Skip to content for accessibility -->
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-teal-500 focus:text-white focus:rounded-lg">Skip to main content</a>
+
+    <!-- ============= NAVBAR ============= -->
+    <nav id="navbar" class="sticky top-0 z-50 glass border-b border-slate-800/80 transition-all">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="#top" class="flex items-center gap-x-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-teal-400 to-emerald-600 flex items-center justify-center shadow-lg shadow-teal-500/20">
+                        <span class="text-white font-bold text-xl tracking-tighter">TJO</span>
+                    </div>
+                    <div>
+                        <div class="font-display text-lg font-semibold tracking-tight group-hover:text-teal-400 transition-colors">Tobi Olabode</div>
+                        <div class="text-[10px] text-slate-500 -mt-1 tracking-widest">FINOPS PRACTITIONER</div>
+                    </div>
+                </a>
+
+                <!-- Desktop nav -->
+                <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                    <a href="#about" class="nav-link text-slate-300 hover:text-white">About</a>
+                    <a href="#skills" class="nav-link text-slate-300 hover:text-white">Skills</a>
+                    <a href="#experience" class="nav-link text-slate-300 hover:text-white">Experience</a>
+                    <a href="#case-studies" class="nav-link text-slate-300 hover:text-white">Case Studies</a>
+                    <a href="#publications" class="nav-link text-slate-300 hover:text-white">Writing</a>
+                    <a href="#contact" class="nav-link text-slate-300 hover:text-white">Contact</a>
+                </div>
+
+                <!-- CTA -->
+                <div class="hidden md:flex items-center gap-x-3">
+                    <a href="Tobi_Olabode_CV.pdf" download
+                       class="px-5 py-2.5 text-sm font-semibold rounded-2xl border border-slate-700 hover:border-teal-500/60 hover:bg-slate-900 transition-all flex items-center gap-x-2">
+                        <i class="fa-solid fa-download text-xs"></i>
+                        <span>CV</span>
+                    </a>
+                    <a href="#contact"
+                       class="px-6 py-2.5 text-sm font-semibold bg-teal-500 hover:bg-teal-400 transition-all rounded-2xl text-slate-950 flex items-center gap-x-2 shadow-lg shadow-teal-500/25">
+                        <span>Get in touch</span>
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn"
+                        class="md:hidden w-11 h-11 flex items-center justify-center text-slate-300 hover:text-white transition-colors"
+                        aria-label="Toggle menu" aria-expanded="false">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-800 bg-slate-950">
+            <div class="px-6 py-6 flex flex-col gap-y-4 text-sm font-medium">
+                <a href="#about" class="mobile-nav-link py-2 text-slate-300">About</a>
+                <a href="#skills" class="mobile-nav-link py-2 text-slate-300">Skills</a>
+                <a href="#experience" class="mobile-nav-link py-2 text-slate-300">Experience</a>
+                <a href="#case-studies" class="mobile-nav-link py-2 text-slate-300">Case Studies</a>
+                <a href="#publications" class="mobile-nav-link py-2 text-slate-300">Writing</a>
+                <a href="#contact" class="mobile-nav-link py-2 text-slate-300">Contact</a>
+
+                <div class="pt-4 border-t border-slate-800 flex flex-col gap-y-3">
+                    <a href="Tobi_Olabode_CV.pdf" download
+                       class="flex items-center justify-center gap-x-2 px-5 py-3 rounded-2xl border border-slate-700 text-sm font-semibold">
+                        <i class="fa-solid fa-download"></i>
+                        <span>Download CV</span>
+                    </a>
+                    <a href="#contact"
+                       class="flex items-center justify-center gap-x-2 px-5 py-3 bg-teal-500 text-slate-950 rounded-2xl text-sm font-semibold">
+                        Get in touch
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main">
+
+    <!-- ============= HERO ============= -->
+    <header id="top" class="relative pt-16 pb-20 md:pt-24 md:pb-28 overflow-hidden">
+        <div class="hero-glow"></div>
+        <div class="absolute inset-0 data-grid opacity-60 pointer-events-none"></div>
+
+        <div class="relative max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-y-12 gap-x-8 items-center">
+                <div class="md:col-span-7">
+                    <div class="inline-flex items-center gap-x-2 px-4 py-1.5 rounded-3xl bg-slate-900/80 border border-slate-800 mb-6 backdrop-blur">
+                        <div class="w-2 h-2 bg-teal-400 rounded-full animate-pulse"></div>
+                        <span class="text-xs font-semibold tracking-[2px] text-teal-400">OPEN TO OPPORTUNITIES</span>
+                    </div>
+
+                    <h1 class="font-display text-5xl sm:text-6xl md:text-7xl leading-[1.04] tracking-tighter font-semibold">
+                        Tobi John<br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-teal-400 to-emerald-400">Olabode</span>
+                    </h1>
+
+                    <p class="mt-6 max-w-xl text-lg sm:text-xl text-slate-400 leading-relaxed">
+                        Cloud FinOps practitioner specialising in multi-cloud cost optimisation.
+                        <span class="text-slate-200">25%+ cloud spend reductions delivered across AWS, Azure & GCP.</span>
+                    </p>
+
+                    <div class="mt-9 flex flex-wrap gap-3 sm:gap-4">
+                        <a href="#case-studies"
+                           class="group inline-flex items-center justify-center gap-x-3 px-7 py-4 rounded-2xl bg-teal-500 hover:bg-teal-400 text-slate-950 font-semibold text-sm tracking-wide transition-all active:scale-[0.98] shadow-lg shadow-teal-500/25">
+                            See my work
+                            <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+
+                        <a href="Tobi_Olabode_CV.pdf" download
+                           class="inline-flex items-center justify-center gap-x-3 px-7 py-4 rounded-2xl border border-slate-700 hover:border-teal-500/60 hover:bg-slate-900 text-sm font-semibold transition-all">
+                            <i class="fa-solid fa-file-pdf"></i>
+                            <span>Download CV</span>
+                        </a>
+                    </div>
+
+                    <div class="mt-10 flex items-center gap-x-5 text-sm">
+                        <div class="flex items-center gap-x-3 text-slate-500">
+                            <i class="fa-brands fa-aws text-xl"></i>
+                            <i class="fa-brands fa-microsoft text-lg"></i>
+                            <i class="fa-brands fa-google text-lg"></i>
+                        </div>
+                        <span class="text-xs text-slate-500">Multi-cloud certified · FinOps Foundation</span>
+                    </div>
+                </div>
+
+                <!-- Visual / metric stack -->
+                <div class="md:col-span-5">
+                    <div class="relative">
+                        <!-- Mock dashboard card -->
+                        <div class="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 modern-shadow backdrop-blur-sm">
+                            <div class="flex items-center justify-between mb-4">
+                                <div>
+                                    <div class="text-[10px] tracking-[2px] text-slate-500">EFFECTIVE COST · YTD</div>
+                                    <div class="font-display text-3xl font-semibold mt-1">£16.72M</div>
+                                </div>
+                                <div class="text-right">
+                                    <div class="text-[10px] tracking-[2px] text-slate-500">TOTAL SAVINGS</div>
+                                    <div class="font-display text-2xl font-semibold text-teal-400 mt-1">£8.35M</div>
+                                </div>
+                            </div>
+
+                            <!-- Mini area chart -->
+                            <svg viewBox="0 0 320 100" class="w-full h-24" preserveAspectRatio="none" aria-hidden="true">
+                                <defs>
+                                    <linearGradient id="g1" x1="0" x2="0" y1="0" y2="1">
+                                        <stop offset="0%" stop-color="#14b8a6" stop-opacity="0.45"/>
+                                        <stop offset="100%" stop-color="#14b8a6" stop-opacity="0"/>
+                                    </linearGradient>
+                                </defs>
+                                <path d="M0,80 L40,72 L80,68 L120,55 L160,48 L200,38 L240,30 L280,22 L320,12 L320,100 L0,100 Z" fill="url(#g1)"/>
+                                <path d="M0,80 L40,72 L80,68 L120,55 L160,48 L200,38 L240,30 L280,22 L320,12" fill="none" stroke="#14b8a6" stroke-width="2"/>
+                                <path d="M0,90 L40,86 L80,84 L120,76 L160,70 L200,62 L240,56 L280,48 L320,40" fill="none" stroke="#38bdf8" stroke-width="1.5" opacity="0.7"/>
+                            </svg>
+
+                            <div class="mt-4 grid grid-cols-3 gap-2 text-center">
+                                <div>
+                                    <div class="text-xs text-slate-500">ESR</div>
+                                    <div class="font-semibold text-teal-400">26.17%</div>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-slate-500">Clouds</div>
+                                    <div class="font-semibold">3</div>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-slate-500">Coverage</div>
+                                    <div class="font-semibold">95%</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="absolute -top-4 -right-3 bg-slate-900 border border-slate-700 rounded-2xl px-4 py-2.5 shadow-xl">
+                            <div class="text-[9px] tracking-widest text-slate-500">AVG SAVINGS</div>
+                            <div class="font-display text-xl font-semibold text-teal-400">25%+</div>
+                        </div>
+
+                        <div class="absolute -bottom-4 -left-3 bg-slate-900 border border-slate-700 rounded-2xl px-4 py-2 text-xs flex items-center gap-x-2 shadow-xl">
+                            <span class="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse"></span>
+                            <span class="font-medium">Live anomaly detection</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============= ABOUT ============= -->
+    <section id="about" class="relative max-w-6xl mx-auto px-6 py-20 md:py-24">
+        <div class="max-w-3xl">
+            <span class="text-teal-400 text-sm font-semibold tracking-[2px]">CHAPTER 01</span>
+            <h2 class="section-heading text-4xl md:text-5xl font-display tracking-tighter mt-2">About Me</h2>
+        </div>
+
+        <div class="mt-12 grid md:grid-cols-12 gap-x-12 gap-y-10">
+            <div class="md:col-span-7">
+                <p class="text-[17px] leading-relaxed text-slate-300">
+                    Results-driven FinOps professional with over <span class="text-white font-semibold">6 years of experience</span> optimising multi-cloud infrastructure costs and driving financial efficiency across <span class="text-white font-semibold">AWS, Azure and GCP</span>. I specialise in building programmatic cost optimisation processes, implementing governance frameworks, and cultivating cost-conscious engineering cultures.
+                </p>
+                <p class="mt-5 text-[17px] leading-relaxed text-slate-300">
+                    My track record includes delivering <span class="metric">25%+ reductions in cloud spend</span> through automated solutions, real-time monitoring, and strategic collaboration with engineering and finance teams. I translate complex technical decisions into clear business value and help organisations build sustainable cloud financial operations.
+                </p>
+                <p class="mt-5 text-[17px] leading-relaxed text-slate-300">
+                    With a Master's in Data Science & Analytics from Cardiff University and a strong foundation in financial operations from prior banking roles, I sit comfortably at the intersection of <span class="text-white">engineering, finance, and analytics</span> — exactly where modern FinOps lives.
+                </p>
+            </div>
+
+            <div class="md:col-span-5">
+                <div class="bg-slate-900/60 border border-slate-800 rounded-3xl p-7 backdrop-blur-sm">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div>
+                            <div class="text-4xl font-display font-semibold text-teal-400 stat-number" data-target="6" data-suffix="+">6+</div>
+                            <div class="text-xs uppercase tracking-widest text-slate-500 mt-1">Years experience</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-display font-semibold text-teal-400 stat-number" data-target="25" data-suffix="%">25%</div>
+                            <div class="text-xs uppercase tracking-widest text-slate-500 mt-1">Avg cloud savings</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-display font-semibold text-teal-400">3</div>
+                            <div class="text-xs uppercase tracking-widest text-slate-500 mt-1">Cloud platforms</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-display font-semibold text-teal-400">50+</div>
+                            <div class="text-xs uppercase tracking-widest text-slate-500 mt-1">Engineers trained</div>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-6 border-t border-slate-800 text-xs text-slate-400 leading-relaxed">
+                        <i class="fa-solid fa-location-dot text-teal-400 mr-2"></i>
+                        Based in the United Kingdom · Open to remote & hybrid roles worldwide
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============= SKILLS ============= -->
+    <section id="skills" class="bg-slate-900/40 border-y border-slate-800 py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex items-end justify-between flex-wrap gap-y-4 mb-12">
+                <div>
+                    <span class="text-teal-400 text-sm font-semibold tracking-[2px]">CHAPTER 02</span>
+                    <h2 class="section-heading text-4xl md:text-5xl font-display tracking-tighter mt-2">Core Competencies</h2>
+                </div>
+                <a href="#experience" class="hidden md:flex items-center text-sm text-teal-400 hover:text-teal-300 font-medium group">
+                    See how I apply these
+                    <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition"></i>
+                </a>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+                <!-- FinOps -->
+                <div class="experience-card bg-slate-950/60 border border-slate-800 rounded-3xl p-7">
+                    <div class="flex items-center gap-x-3 mb-5">
+                        <div class="w-10 h-10 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center">
+                            <i class="fa-solid fa-chart-line text-teal-400"></i>
+                        </div>
+                        <h3 class="font-display text-lg font-semibold tracking-tight">FinOps & Financial Mgmt</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill px-3 py-1 bg-slate-900 text-xs rounded-2xl border border-slate-700">Multi-cloud cost optimisation</span>
+                        <span class="skill-pill px-3 py-1 bg-slate-900 text-xs rounded-2xl border border-slate-700">Forecasting & budgeting</span>
+                        <span class="skill-pill px-3 py-1 bg-slate-900 text-xs rounded-2xl border border-slate-700">Chargeback / showback</span>
+                        <span class="skill-pill px-3 py-1 bg-slate-900 text-xs rounded-2xl border border-slate-700">Right-sizing</span>
+                        <span class="skill-pill px-3 py-1 bg-slate-900 text-xs rounded-2xl border border-slate-700">Waste elimination</span>
+                    </div>
+                </div>
+
+                <!-- Cloud platforms -->
+                <div class="experience-card bg-slate-950/60 border border-slate-800 rounded-3xl p-7">
+                    <div class="flex items-center gap-x-3 mb-5">
+                        <div class="w-10 h-10 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center">
+                            <i class="fa-solid fa-cloud text-teal-400"></i>
+                        </div>
+                        <h3 class="font-display text-lg font-semibold tracking-tight">Cloud Platforms</h3>
+                    </div>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium">Azure</span>
+                            <span class="text-xs px-2.5 py-0.5 bg-emerald-500/10 text-emerald-400 rounded-full font-semibold">Expert</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium">AWS</span>
+                            <span class="text-xs px-2.5 py-0.5 bg-emerald-500/10 text-emerald-400 rounded-full font-semibold">Expert</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium">GCP</span>
+                            <span class="text-xs px-2.5 py-0.5 bg-teal-500/10 text-teal-400 rounded-full font-semibold">Proficient</span>
+                        </div>
+                    </div>
+                    <div class="mt-5 pt-5 border-t border-slate-800 text-xs text-slate-400 leading-relaxed">
+                        Cost Management · RIs & Savings Plans · Budgets · SCPs · CUDs · Apptio · CloudHealth
+                    </div>
+                </div>
+
+                <!-- Technical -->
+                <div class="experience-card bg-slate-950/60 border border-slate-800 rounded-3xl p-7">
+                    <div class="flex items-center gap-x-3 mb-5">
+                        <div class="w-10 h-10 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center">
+                            <i class="fa-solid fa-robot text-teal-400"></i>
+                        </div>
+                        <h3 class="font-display text-lg font-semibold tracking-tight">Technical & Automation</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2 text-xs">
+                        <span class="skill-pill px-3 py-1 bg-slate-900 rounded-2xl border border-slate-700">Terraform / IaC</span>
+                        <span class="skill-pill px-3 py-1 bg-slate-900 rounded-2xl border border-slate-700">Python</span>
+                        <span class="skill-pill px-3 py-1 bg-slate-900 rounded-2xl border border-slate-700">PowerShell</span>
+                        <span class="skill-pill px-3 py-1 bg-slate-900 rounded-2xl border border-slate-700">Bash / Linux</span>
+                        <span class="skill-pill px-3 py-1 bg-slate-900 rounded-2xl border border-slate-700">Power BI</span>
+                        <span class="skill-pill px-3 py-1 bg-slate-900 rounded-2xl border border-slate-700">SQL</span>
+                        <span class="skill-pill px-3 py-1 bg-slate-900 rounded-2xl border border-slate-700">Azure DevOps</span>
+                        <span class="skill-pill px-3 py-1 bg-slate-900 rounded-2xl border border-slate-700">GitHub Actions</span>
+                        <span class="skill-pill px-3 py-1 bg-slate-900 rounded-2xl border border-slate-700">API Integration</span>
+                        <span class="skill-pill px-3 py-1 bg-slate-900 rounded-2xl border border-slate-700">Anomaly Detection</span>
+                    </div>
+                </div>
+
+                <!-- Leadership -->
+                <div class="experience-card bg-slate-950/60 border border-slate-800 rounded-3xl p-7">
+                    <div class="flex items-center gap-x-3 mb-5">
+                        <div class="w-10 h-10 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center">
+                            <i class="fa-solid fa-users text-teal-400"></i>
+                        </div>
+                        <h3 class="font-display text-lg font-semibold tracking-tight">Leadership</h3>
+                    </div>
+                    <ul class="space-y-2.5 text-sm text-slate-300">
+                        <li class="flex items-start gap-x-2"><i class="fa-solid fa-check text-teal-400 mt-1 text-xs"></i><span>Cross-functional stakeholder mgmt</span></li>
+                        <li class="flex items-start gap-x-2"><i class="fa-solid fa-check text-teal-400 mt-1 text-xs"></i><span>FinOps culture evangelism</span></li>
+                        <li class="flex items-start gap-x-2"><i class="fa-solid fa-check text-teal-400 mt-1 text-xs"></i><span>Vendor relationship mgmt</span></li>
+                        <li class="flex items-start gap-x-2"><i class="fa-solid fa-check text-teal-400 mt-1 text-xs"></i><span>Technical training & enablement</span></li>
+                        <li class="flex items-start gap-x-2"><i class="fa-solid fa-check text-teal-400 mt-1 text-xs"></i><span>Quarterly leadership reviews</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============= EXPERIENCE ============= -->
+    <section id="experience" class="max-w-6xl mx-auto px-6 py-20 md:py-24">
+        <div class="mb-12">
+            <span class="text-teal-400 text-sm font-semibold tracking-[2px]">CHAPTER 03</span>
+            <h2 class="section-heading text-4xl md:text-5xl font-display tracking-tighter mt-2">Professional Experience</h2>
+            <p class="mt-4 text-slate-400 max-w-md">Measurable impact delivered across enterprise multi-cloud environments.</p>
+        </div>
+
+        <div class="space-y-10 md:space-y-12">
+
+            <!-- Next Retail -->
+            <div class="md:grid md:grid-cols-12 gap-x-8">
+                <div class="md:col-span-3 md:text-right mb-3 md:mb-0">
+                    <div class="md:sticky md:top-28">
+                        <div class="font-mono text-xs text-teal-400 tracking-widest">OCT 2025 — PRESENT</div>
+                        <div class="font-display font-semibold text-lg mt-1 tracking-tight">Next Retail Limited</div>
+                        <div class="text-teal-400 text-sm">Cloud FinOps Analyst</div>
+                        <div class="text-xs text-slate-500 mt-0.5">Azure & GCP</div>
+                    </div>
+                </div>
+
+                <div class="md:col-span-9">
+                    <div class="experience-card bg-slate-900/60 border border-slate-800 rounded-3xl p-7 md:p-8 modern-shadow">
+                        <p class="text-[15px] text-slate-300 mb-5">
+                            <span class="font-semibold text-white">Building FinOps from the ground up</span> at a major UK retail organisation, embedding governance and accountability across cloud spend.
+                        </p>
+                        <ul class="space-y-2.5 text-[15px] text-slate-300">
+                            <li class="flex gap-x-3"><span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>Developing and implementing FinOps policies, budgets, and governance frameworks from scratch</li>
+                            <li class="flex gap-x-3"><span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>Driving cost optimisation through resource rightsizing, reservations, and auto-scaling strategies</li>
+                            <li class="flex gap-x-3"><span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>Building automated Power BI dashboards leveraging Terraform & PowerShell for reporting efficiency</li>
+                            <li class="flex gap-x-3"><span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>Defining and reporting KPIs to foster financial accountability and responsible cloud usage</li>
+                            <li class="flex gap-x-3"><span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>Collaborating with architects, DevOps, finance and procurement teams to embed cost accountability</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Taylor & Eyre -->
+            <div class="md:grid md:grid-cols-12 gap-x-8">
+                <div class="md:col-span-3 md:text-right mb-3 md:mb-0">
+                    <div class="md:sticky md:top-28">
+                        <div class="font-mono text-xs text-teal-400 tracking-widest">NOV 2022 — APR 2025</div>
+                        <div class="font-display font-semibold text-lg mt-1 tracking-tight">Taylor & Eyre Limited</div>
+                        <div class="text-teal-400 text-sm">FinOps Engineer</div>
+                        <div class="text-xs text-slate-500 mt-0.5">AWS</div>
+                    </div>
+                </div>
+
+                <div class="md:col-span-9">
+                    <div class="experience-card bg-slate-900/60 border border-slate-800 rounded-3xl p-7 md:p-8 modern-shadow">
+                        <div class="mb-5">
+                            <div class="inline-flex items-center rounded-full bg-emerald-500/10 text-emerald-400 text-[11px] font-bold px-4 py-1 tracking-widest border border-emerald-500/20">
+                                <i class="fa-solid fa-trophy mr-2"></i>KEY ACHIEVEMENT · 25% REDUCTION IN CLOUD WASTE
+                            </div>
+                        </div>
+
+                        <ul class="space-y-2.5 text-[15px] text-slate-300">
+                            <li class="flex gap-x-3"><span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>Delivered <span class="metric">25% reduction</span> in cloud waste using AWS Cost Explorer, Budgets, and Anomaly Detection</li>
+                            <li class="flex gap-x-3"><span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>Built automated Power BI dashboards providing real-time visibility across <span class="font-semibold text-white">15+ business units</span></li>
+                            <li class="flex gap-x-3"><span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>Created Python-based automated cost reporting system reducing manual effort by <span class="metric">80%</span></li>
+                            <li class="flex gap-x-3"><span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>Implemented automated shutdown scripts achieving <span class="metric">30% cost reduction</span> in dev/test environments</li>
+                            <li class="flex gap-x-3"><span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>Established resource tagging policies and SCPs improving cost allocation accuracy by <span class="metric">95%</span></li>
+                            <li class="flex gap-x-3"><span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>Trained <span class="font-semibold text-white">50+ engineers</span> on cost-conscious development practices</li>
+                            <li class="flex gap-x-3"><span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>Supported contract negotiations contributing to <span class="metric">15% annual savings</span> through strategic procurement</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FBNQuest -->
+            <div class="md:grid md:grid-cols-12 gap-x-8">
+                <div class="md:col-span-3 md:text-right mb-3 md:mb-0">
+                    <div class="md:sticky md:top-28">
+                        <div class="font-mono text-xs text-teal-400 tracking-widest">FEB 2019 — SEP 2022</div>
+                        <div class="font-display font-semibold text-lg mt-1 tracking-tight">FBNQuest Merchant Bank</div>
+                        <div class="text-teal-400 text-sm">Senior Transaction Analyst</div>
+                    </div>
+                </div>
+
+                <div class="md:col-span-9">
+                    <div class="experience-card bg-slate-900/60 border border-slate-800 rounded-3xl p-7 md:p-8 modern-shadow">
+                        <ul class="space-y-2.5 text-[15px] text-slate-300">
+                            <li class="flex gap-x-3"><span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>Led team of 6 analysts achieving <span class="metric">99%+ error-free</span> equity trade execution</li>
+                            <li class="flex gap-x-3"><span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>Reduced transaction processing time by <span class="metric">40%</span> through workflow optimisation</li>
+                            <li class="flex gap-x-3"><span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>Developed automated reconciliation processes and Power BI financial reporting dashboards</li>
+                            <li class="flex gap-x-3"><span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>Implemented KYC/AML processes optimising client onboarding by <span class="metric">15%</span> while ensuring SEC Nigeria & MiFID II compliance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p class="mt-10 text-center text-xs text-slate-500">
+            Earlier roles · Deputy Branch Operations Manager at Zenith Bank · Project Manager at DUFMA Integrated Agritech
+        </p>
+    </section>
+
+    <!-- ============= CASE STUDIES ============= -->
+    <section id="case-studies" class="bg-slate-900/40 border-y border-slate-800 py-20 md:py-24">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="mb-12 max-w-2xl">
+                <span class="text-teal-400 text-sm font-semibold tracking-[2px]">CHAPTER 04</span>
+                <h2 class="section-heading text-4xl md:text-5xl font-display tracking-tighter mt-2">Featured Case Studies</h2>
+                <p class="mt-4 text-slate-400">A selection of FinOps dashboards and tooling I've built to give engineering and finance teams real visibility into cloud spend.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 lg:gap-7">
+
+                <!-- Case study 1: Multi-Cloud Cost Summary -->
+                <article class="case-study group bg-slate-950/70 border border-slate-800 rounded-3xl overflow-hidden flex flex-col">
+                    <div class="relative aspect-[16/10] bg-slate-900 overflow-hidden border-b border-slate-800">
+                        <!-- Inline SVG dashboard preview (replace with assets/screenshots/finops-cost-summary.png) -->
+                        <img src="assets/screenshots/finops-cost-summary.png"
+                             alt="FinOps Cost Summary dashboard showing £16.72M effective cost, £8.35M total savings, 26.17% ESR, and a stacked time-series of cost vs negotiated and commitment savings."
+                             loading="lazy" decoding="async"
+                             class="case-zoom absolute inset-0 w-full h-full object-cover"
+                             onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <!-- SVG fallback preview -->
+                        <div style="display:none" class="absolute inset-0 p-5">
+                            <svg viewBox="0 0 400 240" class="w-full h-full">
+                                <rect width="400" height="240" fill="#0f172a"/>
+                                <text x="20" y="30" fill="#cbd5e1" font-size="11" font-family="Inter">Effective cost</text>
+                                <text x="20" y="55" fill="#fff" font-size="22" font-weight="700" font-family="Inter">£16.72M</text>
+                                <text x="150" y="30" fill="#cbd5e1" font-size="11">Total savings</text>
+                                <text x="150" y="55" fill="#5eead4" font-size="22" font-weight="700">£8.35M</text>
+                                <text x="280" y="30" fill="#cbd5e1" font-size="11">ESR</text>
+                                <text x="280" y="55" fill="#5eead4" font-size="22" font-weight="700">26.17%</text>
+                                <defs>
+                                    <linearGradient id="cs1" x1="0" x2="0" y1="0" y2="1">
+                                        <stop offset="0%" stop-color="#14b8a6" stop-opacity="0.5"/>
+                                        <stop offset="100%" stop-color="#14b8a6" stop-opacity="0"/>
+                                    </linearGradient>
+                                </defs>
+                                <path d="M20,200 L60,180 L100,170 L140,150 L180,130 L220,115 L260,95 L300,80 L340,65 L380,50 L380,220 L20,220 Z" fill="url(#cs1)"/>
+                                <path d="M20,200 L60,180 L100,170 L140,150 L180,130 L220,115 L260,95 L300,80 L340,65 L380,50" stroke="#14b8a6" stroke-width="2" fill="none"/>
+                                <path d="M20,210 L60,200 L100,195 L140,180 L180,165 L220,150 L260,135 L300,120 L340,105 L380,90" stroke="#38bdf8" stroke-width="1.5" fill="none" opacity="0.7"/>
+                                <path d="M20,215 L60,210 L100,208 L140,200 L180,190 L220,180 L260,168 L300,158 L340,145 L380,135" stroke="#fb7185" stroke-width="1.5" fill="none" opacity="0.7"/>
+                            </svg>
+                        </div>
+                        <div class="absolute top-4 left-4 inline-flex items-center gap-x-2 px-3 py-1.5 rounded-full bg-slate-950/80 backdrop-blur border border-slate-700">
+                            <i class="fa-brands fa-microsoft text-xs text-teal-400"></i>
+                            <span class="text-[10px] font-bold tracking-widest text-teal-400">POWER BI · MULTI-CLOUD</span>
+                        </div>
+                    </div>
+
+                    <div class="p-7 flex-1 flex flex-col">
+                        <h3 class="font-display text-2xl font-semibold tracking-tight">Multi-Cloud FinOps Executive Dashboard</h3>
+                        <p class="mt-3 text-slate-300 text-[15px] flex-1">
+                            Single pane of glass for executive cloud spend across subscriptions, services and commitment discounts. Tracks <span class="text-teal-400 font-semibold">£16.7M effective cost</span> against <span class="text-teal-400 font-semibold">£8.4M of realised savings</span> with full breakdown by subscription, service and resource group.
+                        </p>
+                        <div class="mt-5 grid grid-cols-3 gap-2 text-center text-xs">
+                            <div class="bg-slate-900 rounded-xl py-2 border border-slate-800"><div class="font-bold text-teal-400">£16.7M</div><div class="text-[10px] text-slate-500 tracking-widest">EFF. COST</div></div>
+                            <div class="bg-slate-900 rounded-xl py-2 border border-slate-800"><div class="font-bold text-teal-400">£8.35M</div><div class="text-[10px] text-slate-500 tracking-widest">SAVINGS</div></div>
+                            <div class="bg-slate-900 rounded-xl py-2 border border-slate-800"><div class="font-bold text-teal-400">26.17%</div><div class="text-[10px] text-slate-500 tracking-widest">ESR</div></div>
+                        </div>
+                        <div class="mt-5 flex flex-wrap gap-2 text-xs">
+                            <span class="px-3 py-1 bg-slate-900 rounded-2xl border border-slate-700">Power BI</span>
+                            <span class="px-3 py-1 bg-slate-900 rounded-2xl border border-slate-700">Azure Cost Mgmt</span>
+                            <span class="px-3 py-1 bg-slate-900 rounded-2xl border border-slate-700">Savings Plans</span>
+                            <span class="px-3 py-1 bg-slate-900 rounded-2xl border border-slate-700">RIs</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Case study 2: Daily Cost Dashboard -->
+                <article class="case-study group bg-slate-950/70 border border-slate-800 rounded-3xl overflow-hidden flex flex-col">
+                    <div class="relative aspect-[16/10] bg-slate-900 overflow-hidden border-b border-slate-800">
+                        <img src="assets/screenshots/finops-daily-cost.png"
+                             alt="FinOps Daily Cost Dashboard with 30-day department breakdown, anomaly detection band and yesterday-vs-30-day-average comparison."
+                             loading="lazy" decoding="async"
+                             class="case-zoom absolute inset-0 w-full h-full object-cover"
+                             onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <div style="display:none" class="absolute inset-0 p-5">
+                            <svg viewBox="0 0 400 240" class="w-full h-full">
+                                <rect width="400" height="240" fill="#0f172a"/>
+                                <text x="20" y="26" fill="#cbd5e1" font-size="10">Yesterday's cost · 30d avg</text>
+                                <text x="20" y="50" fill="#22c55e" font-size="20" font-weight="700">£34.73K ✓</text>
+                                <text x="20" y="66" fill="#94a3b8" font-size="9">vs 30d avg £43.02K (+19.27%)</text>
+                                <!-- Stacked area chart by department -->
+                                <g transform="translate(20,90)">
+                                    <defs>
+                                        <linearGradient id="dc1" x1="0" x2="0" y1="0" y2="1">
+                                            <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.85"/><stop offset="100%" stop-color="#a78bfa" stop-opacity="0.4"/>
+                                        </linearGradient>
+                                        <linearGradient id="dc2" x1="0" x2="0" y1="0" y2="1">
+                                            <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.85"/><stop offset="100%" stop-color="#fbbf24" stop-opacity="0.4"/>
+                                        </linearGradient>
+                                        <linearGradient id="dc3" x1="0" x2="0" y1="0" y2="1">
+                                            <stop offset="0%" stop-color="#f472b6" stop-opacity="0.85"/><stop offset="100%" stop-color="#f472b6" stop-opacity="0.4"/>
+                                        </linearGradient>
+                                        <linearGradient id="dc4" x1="0" x2="0" y1="0" y2="1">
+                                            <stop offset="0%" stop-color="#34d399" stop-opacity="0.85"/><stop offset="100%" stop-color="#34d399" stop-opacity="0.4"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <!-- Layer 4 (top - other depts) -->
+                                    <path d="M0,18 Q40,22 80,15 T160,18 T240,16 T320,12 L360,8 L360,130 L0,130 Z" fill="url(#dc1)"/>
+                                    <!-- Layer 3 (datacentre) -->
+                                    <path d="M0,42 Q40,45 80,40 T160,42 T240,40 T320,36 L360,32 L360,130 L0,130 Z" fill="url(#dc2)"/>
+                                    <!-- Layer 2 (BIS) -->
+                                    <path d="M0,68 Q40,70 80,66 T160,68 T240,65 T320,62 L360,58 L360,130 L0,130 Z" fill="url(#dc3)"/>
+                                    <!-- Layer 1 (Infra & Cloud) -->
+                                    <path d="M0,92 Q40,95 80,90 T160,92 T240,90 T320,87 L360,84 L360,130 L0,130 Z" fill="url(#dc4)"/>
+                                    <!-- Anomaly callout -->
+                                    <circle cx="320" cy="12" r="4" fill="#fb7185"/>
+                                    <text x="328" y="10" fill="#fb7185" font-size="8" font-weight="700">SPIKE</text>
+                                </g>
+                                <text x="20" y="232" fill="#64748b" font-size="8">Apr 9 → May 8 · stacked by department</text>
+                            </svg>
+                        </div>
+                        <div class="absolute top-4 left-4 inline-flex items-center gap-x-2 px-3 py-1.5 rounded-full bg-slate-950/80 backdrop-blur border border-slate-700">
+                            <span class="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse"></span>
+                            <span class="text-[10px] font-bold tracking-widest text-teal-400">DAILY · ANOMALY DETECTION</span>
+                        </div>
+                    </div>
+
+                    <div class="p-7 flex-1 flex flex-col">
+                        <h3 class="font-display text-2xl font-semibold tracking-tight">Daily Cost Monitoring & Anomaly Detection</h3>
+                        <p class="mt-3 text-slate-300 text-[15px] flex-1">
+                            Daily cost dashboard with department-level stacking and a 30-day rolling baseline. Surfaces yesterday's spend against the 30-day average, drilling down by product, subscription, environment and resource group to investigate anomalies in minutes rather than days.
+                        </p>
+                        <div class="mt-5 grid grid-cols-3 gap-2 text-center text-xs">
+                            <div class="bg-slate-900 rounded-xl py-2 border border-slate-800"><div class="font-bold text-teal-400">30d</div><div class="text-[10px] text-slate-500 tracking-widest">BASELINE</div></div>
+                            <div class="bg-slate-900 rounded-xl py-2 border border-slate-800"><div class="font-bold text-teal-400">15+</div><div class="text-[10px] text-slate-500 tracking-widest">BUS UNITS</div></div>
+                            <div class="bg-slate-900 rounded-xl py-2 border border-slate-800"><div class="font-bold text-teal-400">80%</div><div class="text-[10px] text-slate-500 tracking-widest">LESS MANUAL</div></div>
+                        </div>
+                        <div class="mt-5 flex flex-wrap gap-2 text-xs">
+                            <span class="px-3 py-1 bg-slate-900 rounded-2xl border border-slate-700">Power BI</span>
+                            <span class="px-3 py-1 bg-slate-900 rounded-2xl border border-slate-700">DAX</span>
+                            <span class="px-3 py-1 bg-slate-900 rounded-2xl border border-slate-700">Anomaly Detection</span>
+                            <span class="px-3 py-1 bg-slate-900 rounded-2xl border border-slate-700">Tagging</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Case study 3: GCP Cost Analysis -->
+                <article class="case-study group bg-slate-950/70 border border-slate-800 rounded-3xl overflow-hidden flex flex-col">
+                    <div class="relative aspect-[16/10] bg-slate-900 overflow-hidden border-b border-slate-800">
+                        <img src="assets/screenshots/gcp-cost-analysis.png"
+                             alt="GCP Cost analysis Jan-Sept 2025 showing total cost £1.45M, discounts received £838.55, monthly cost breakdown with January peak of £508.76K."
+                             loading="lazy" decoding="async"
+                             class="case-zoom absolute inset-0 w-full h-full object-cover"
+                             onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <div style="display:none" class="absolute inset-0 p-5">
+                            <svg viewBox="0 0 400 240" class="w-full h-full">
+                                <rect width="400" height="240" fill="#0f172a"/>
+                                <text x="20" y="30" fill="#cbd5e1" font-size="11">Total Cost GCP Combined</text>
+                                <text x="20" y="55" fill="#fff" font-size="22" font-weight="700">£1.45M</text>
+                                <text x="200" y="30" fill="#cbd5e1" font-size="11">Discount received</text>
+                                <text x="200" y="55" fill="#5eead4" font-size="20" font-weight="700">£838.55</text>
+                                <g transform="translate(20,90)">
+                                    <rect x="0" y="0" width="32" height="120" fill="#fb923c"/>
+                                    <rect x="40" y="80" width="32" height="40" fill="#3b82f6"/>
+                                    <rect x="80" y="75" width="32" height="45" fill="#3b82f6"/>
+                                    <rect x="120" y="60" width="32" height="60" fill="#3b82f6"/>
+                                    <rect x="160" y="65" width="32" height="55" fill="#3b82f6"/>
+                                    <rect x="200" y="55" width="32" height="65" fill="#3b82f6"/>
+                                    <rect x="240" y="60" width="32" height="60" fill="#3b82f6"/>
+                                    <rect x="280" y="78" width="32" height="42" fill="#3b82f6"/>
+                                    <rect x="320" y="82" width="32" height="38" fill="#3b82f6"/>
+                                    <path d="M16,5 Q56,90 96,80 T176,68 T256,58 T336,80" stroke="#fb7185" stroke-width="2" fill="none"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="absolute top-4 left-4 inline-flex items-center gap-x-2 px-3 py-1.5 rounded-full bg-slate-950/80 backdrop-blur border border-slate-700">
+                            <i class="fa-brands fa-google text-xs text-teal-400"></i>
+                            <span class="text-[10px] font-bold tracking-widest text-teal-400">GCP · DISCOUNT ANALYSIS</span>
+                        </div>
+                    </div>
+
+                    <div class="p-7 flex-1 flex flex-col">
+                        <h3 class="font-display text-2xl font-semibold tracking-tight">GCP Cost & Discount Ratio Analysis</h3>
+                        <p class="mt-3 text-slate-300 text-[15px] flex-1">
+                            YTD GCP analysis covering <span class="text-teal-400 font-semibold">£1.45M of combined spend</span> across multiple billing accounts, with cost-to-discount ratio breakdowns by project, environment and service. Filterable slicers across department, environment and service description for granular drill-down.
+                        </p>
+                        <div class="mt-5 grid grid-cols-3 gap-2 text-center text-xs">
+                            <div class="bg-slate-900 rounded-xl py-2 border border-slate-800"><div class="font-bold text-teal-400">£1.45M</div><div class="text-[10px] text-slate-500 tracking-widest">TOTAL</div></div>
+                            <div class="bg-slate-900 rounded-xl py-2 border border-slate-800"><div class="font-bold text-teal-400">9 mo</div><div class="text-[10px] text-slate-500 tracking-widest">PERIOD</div></div>
+                            <div class="bg-slate-900 rounded-xl py-2 border border-slate-800"><div class="font-bold text-teal-400">CUDs</div><div class="text-[10px] text-slate-500 tracking-widest">APPLIED</div></div>
+                        </div>
+                        <div class="mt-5 flex flex-wrap gap-2 text-xs">
+                            <span class="px-3 py-1 bg-slate-900 rounded-2xl border border-slate-700">GCP</span>
+                            <span class="px-3 py-1 bg-slate-900 rounded-2xl border border-slate-700">CUDs</span>
+                            <span class="px-3 py-1 bg-slate-900 rounded-2xl border border-slate-700">Power BI</span>
+                            <span class="px-3 py-1 bg-slate-900 rounded-2xl border border-slate-700">Slicers</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Case study 4: AI Cost Tracker -->
+                <article class="case-study group bg-slate-950/70 border border-slate-800 rounded-3xl overflow-hidden flex flex-col">
+                    <div class="relative aspect-[16/10] bg-slate-900 overflow-hidden border-b border-slate-800">
+                        <img src="assets/screenshots/ai-cost-summary.png"
+                             alt="Azure AI Cost Summary daily dashboard showing AI spend by department over a 30-day window."
+                             loading="lazy" decoding="async"
+                             class="case-zoom absolute inset-0 w-full h-full object-cover"
+                             onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <div style="display:none" class="absolute inset-0 p-5">
+                            <svg viewBox="0 0 400 240" class="w-full h-full">
+                                <rect width="400" height="240" fill="#0f172a"/>
+                                <text x="20" y="30" fill="#cbd5e1" font-size="11">Azure AI Cost · Last 30 days</text>
+                                <text x="20" y="55" fill="#fff" font-size="20" font-weight="700">£3,458.92</text>
+                                <text x="20" y="72" fill="#94a3b8" font-size="10">DIRECTORY MARKETING · 3.6B tokens</text>
+                                <g transform="translate(20,95)">
+                                    <rect x="0" y="100" width="20" height="20" fill="#3b82f6"/>
+                                    <rect x="22" y="80" width="20" height="40" fill="#3b82f6"/>
+                                    <rect x="44" y="40" width="20" height="80" fill="#3b82f6"/>
+                                    <rect x="66" y="20" width="20" height="100" fill="#3b82f6"/>
+                                    <rect x="88" y="50" width="20" height="70" fill="#3b82f6"/>
+                                    <rect x="110" y="55" width="20" height="65" fill="#3b82f6"/>
+                                    <rect x="132" y="58" width="20" height="62" fill="#3b82f6"/>
+                                    <rect x="154" y="65" width="20" height="55" fill="#3b82f6"/>
+                                    <rect x="176" y="35" width="20" height="85" fill="#3b82f6"/>
+                                    <rect x="198" y="80" width="20" height="40" fill="#3b82f6"/>
+                                    <rect x="220" y="115" width="20" height="5" fill="#3b82f6"/>
+                                    <rect x="242" y="115" width="20" height="5" fill="#3b82f6"/>
+                                    <rect x="264" y="105" width="20" height="15" fill="#3b82f6"/>
+                                    <rect x="286" y="100" width="20" height="20" fill="#3b82f6"/>
+                                    <rect x="308" y="115" width="20" height="5" fill="#3b82f6"/>
+                                    <rect x="330" y="118" width="20" height="2" fill="#3b82f6"/>
+                                    <rect x="352" y="118" width="20" height="2" fill="#3b82f6"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="absolute top-4 left-4 inline-flex items-center gap-x-2 px-3 py-1.5 rounded-full bg-slate-950/80 backdrop-blur border border-slate-700">
+                            <i class="fa-solid fa-microchip text-xs text-teal-400"></i>
+                            <span class="text-[10px] font-bold tracking-widest text-teal-400">AI / ML · DEPT BREAKDOWN</span>
+                        </div>
+                    </div>
+
+                    <div class="p-7 flex-1 flex flex-col">
+                        <h3 class="font-display text-2xl font-semibold tracking-tight">Azure AI Cost Tracker</h3>
+                        <p class="mt-3 text-slate-300 text-[15px] flex-1">
+                            Daily cost dashboard for Azure AI / ML services tracking consumed quantity (tokens, calls) alongside effective cost. Filtered by department, environment and month to give product owners clear visibility on AI workload economics — critical as generative AI workloads scale.
+                        </p>
+                        <div class="mt-5 grid grid-cols-3 gap-2 text-center text-xs">
+                            <div class="bg-slate-900 rounded-xl py-2 border border-slate-800"><div class="font-bold text-teal-400">Daily</div><div class="text-[10px] text-slate-500 tracking-widest">CADENCE</div></div>
+                            <div class="bg-slate-900 rounded-xl py-2 border border-slate-800"><div class="font-bold text-teal-400">3.6B</div><div class="text-[10px] text-slate-500 tracking-widest">TOKENS / MO</div></div>
+                            <div class="bg-slate-900 rounded-xl py-2 border border-slate-800"><div class="font-bold text-teal-400">N depts</div><div class="text-[10px] text-slate-500 tracking-widest">FILTERABLE</div></div>
+                        </div>
+                        <div class="mt-5 flex flex-wrap gap-2 text-xs">
+                            <span class="px-3 py-1 bg-slate-900 rounded-2xl border border-slate-700">Azure OpenAI</span>
+                            <span class="px-3 py-1 bg-slate-900 rounded-2xl border border-slate-700">Power BI</span>
+                            <span class="px-3 py-1 bg-slate-900 rounded-2xl border border-slate-700">Tagging</span>
+                            <span class="px-3 py-1 bg-slate-900 rounded-2xl border border-slate-700">FinOps for AI</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Case study 5: Azure Shadow Cost -->
+                <article class="case-study group md:col-span-2 bg-slate-950/70 border border-slate-800 rounded-3xl overflow-hidden">
+                    <div class="md:grid md:grid-cols-5">
+                        <div class="md:col-span-2 relative aspect-[16/10] md:aspect-auto bg-slate-900 border-b md:border-b-0 md:border-r border-slate-800 overflow-hidden">
+                            <img src="assets/screenshots/azure-shadow-cost.png"
+                                 alt="Azure Shadow Cost open source tool — illustration of shadow cost detection."
+                                 loading="lazy" decoding="async"
+                                 class="case-zoom absolute inset-0 w-full h-full object-cover"
+                                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                            <div style="display:none" class="absolute inset-0 items-center justify-center p-6">
+                                <svg viewBox="0 0 200 200" class="w-44 h-44">
+                                    <defs>
+                                        <radialGradient id="rg1">
+                                            <stop offset="0%" stop-color="#14b8a6" stop-opacity="0.4"/>
+                                            <stop offset="100%" stop-color="#14b8a6" stop-opacity="0"/>
+                                        </radialGradient>
+                                    </defs>
+                                    <circle cx="100" cy="100" r="90" fill="url(#rg1)"/>
+                                    <circle cx="100" cy="100" r="70" fill="none" stroke="#14b8a6" stroke-width="1.5" stroke-dasharray="4 4"/>
+                                    <circle cx="100" cy="100" r="45" fill="none" stroke="#14b8a6" stroke-width="1.5"/>
+                                    <text x="100" y="106" fill="#5eead4" font-size="14" font-weight="700" text-anchor="middle" font-family="Inter">SHADOW</text>
+                                    <circle cx="60" cy="60" r="3" fill="#fb7185"/>
+                                    <circle cx="140" cy="80" r="3" fill="#fb7185"/>
+                                    <circle cx="50" cy="140" r="3" fill="#fb7185"/>
+                                    <circle cx="160" cy="150" r="3" fill="#fb7185"/>
+                                </svg>
+                            </div>
+                            <div class="absolute top-4 left-4 inline-flex items-center gap-x-2 px-3 py-1.5 rounded-full bg-slate-950/80 backdrop-blur border border-slate-700">
+                                <i class="fa-brands fa-github text-xs"></i>
+                                <span class="text-[10px] font-bold tracking-widest text-teal-400">OPEN SOURCE · GITHUB</span>
+                            </div>
+                        </div>
+
+                        <div class="md:col-span-3 p-7 md:p-9 flex flex-col">
+                            <h3 class="font-display text-2xl md:text-3xl font-semibold tracking-tight">Azure Shadow Cost</h3>
+                            <p class="mt-3 text-slate-300 text-[15px] flex-1">
+                                Open-source tooling and analysis framework for surfacing hidden ("shadow") costs, orphaned resources, and optimisation opportunities inside complex Azure estates — going beyond what native cost management tools can show. Built to be pluggable into existing FinOps workflows.
+                            </p>
+                            <div class="mt-5 flex flex-wrap gap-2 text-xs">
+                                <span class="px-3 py-1 bg-slate-900 rounded-2xl border border-slate-700">Azure</span>
+                                <span class="px-3 py-1 bg-slate-900 rounded-2xl border border-slate-700">Python</span>
+                                <span class="px-3 py-1 bg-slate-900 rounded-2xl border border-slate-700">Cost Analytics</span>
+                                <span class="px-3 py-1 bg-slate-900 rounded-2xl border border-slate-700">CLI</span>
+                            </div>
+                            <div class="mt-6 flex flex-wrap gap-3">
+                                <a href="https://github.com/Johhnmarshal/azure-shadow-cost" target="_blank" rel="noopener"
+                                   class="inline-flex items-center gap-x-2 px-5 py-2.5 rounded-2xl bg-teal-500 hover:bg-teal-400 text-slate-950 font-semibold text-sm transition-all">
+                                    <i class="fa-brands fa-github"></i>
+                                    View on GitHub
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                                </a>
+                                <a href="https://github.com/Johhnmarshal" target="_blank" rel="noopener"
+                                   class="inline-flex items-center gap-x-2 px-5 py-2.5 rounded-2xl border border-slate-700 hover:border-teal-500/60 hover:bg-slate-900 text-sm font-semibold transition-all">
+                                    All repositories
+                                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============= PUBLICATIONS ============= -->
+    <section id="publications" class="max-w-6xl mx-auto px-6 py-20 md:py-24">
+        <div class="mb-12">
+            <span class="text-teal-400 text-sm font-semibold tracking-[2px]">CHAPTER 05</span>
+            <h2 class="section-heading text-4xl md:text-5xl font-display tracking-tighter mt-2">Writing & Publications</h2>
+            <p class="mt-4 text-slate-400 max-w-md">Sharing FinOps perspectives at the intersection of data science and cloud financial operations.</p>
+        </div>
+
+        <a href="https://medium.com/@tobiolabode/why-your-cloud-bill-is-a-big-data-problem-a-data-scientists-take-on-finops-in-2026-31550f3d8fe0" target="_blank" rel="noopener"
+           class="block experience-card bg-slate-900/60 border border-slate-800 rounded-3xl p-7 md:p-9 group">
+            <div class="md:grid md:grid-cols-12 gap-x-8 items-center gap-y-6">
+                <div class="md:col-span-2 flex md:justify-center mb-4 md:mb-0">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 flex items-center justify-center">
+                        <i class="fa-brands fa-medium text-3xl text-teal-400"></i>
+                    </div>
+                </div>
+                <div class="md:col-span-8">
+                    <div class="flex items-center gap-x-3 text-xs text-slate-500 mb-2">
+                        <span class="px-2.5 py-0.5 bg-teal-500/10 text-teal-400 rounded-full font-semibold tracking-wider">FEATURED</span>
+                        <span>Medium · 2026</span>
+                    </div>
+                    <h3 class="font-display text-xl md:text-2xl font-semibold tracking-tight group-hover:text-teal-400 transition-colors">
+                        Why Your Cloud Bill Is a Big Data Problem
+                    </h3>
+                    <p class="mt-2 text-slate-300 text-[15px]">
+                        A data scientist's take on FinOps in 2026 — examining how cloud billing has crossed the threshold from spreadsheet exercise into a genuine big-data engineering and analytics challenge.
+                    </p>
+                </div>
+                <div class="md:col-span-2 md:text-right">
+                    <span class="inline-flex items-center gap-x-2 text-teal-400 font-semibold text-sm group-hover:translate-x-1 transition-transform">
+                        Read article <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                    </span>
+                </div>
+            </div>
+        </a>
+
+        <div class="mt-6 text-center">
+            <a href="https://medium.com/@tobiolabode" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-x-2 text-sm text-slate-400 hover:text-teal-400 transition-colors">
+                <i class="fa-brands fa-medium"></i>
+                <span>More articles on Medium</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- ============= EDUCATION & CREDENTIALS ============= -->
+    <section class="bg-slate-900/40 border-y border-slate-800 py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-x-16 gap-y-14">
+                <div>
+                    <span class="text-teal-400 text-sm font-semibold tracking-[2px]">CHAPTER 06</span>
+                    <h2 class="section-heading text-3xl md:text-4xl font-display tracking-tighter mt-3 mb-8">Education</h2>
+
+                    <div class="space-y-7">
+                        <div class="bg-slate-950/60 border border-slate-800 rounded-2xl p-6">
+                            <div class="font-display font-semibold text-lg">MSc Data Science & Analytics</div>
+                            <div class="text-teal-400 text-sm">Cardiff University</div>
+                            <div class="text-sm text-slate-400 mt-2">Advanced analytics, statistical modelling and data-driven decision making.</div>
+                        </div>
+                        <div class="bg-slate-950/60 border border-slate-800 rounded-2xl p-6">
+                            <div class="font-display font-semibold text-lg">B.Tech Management & Accounting</div>
+                            <div class="text-teal-400 text-sm">Ladoke Akintola University of Technology</div>
+                            <div class="text-sm text-slate-400 mt-2">Financial management and business operations foundation.</div>
+                        </div>
+                        <div class="bg-slate-950/60 border border-slate-800 rounded-2xl p-6">
+                            <div class="font-display font-semibold text-lg">Operational Research Society</div>
+                            <div class="text-teal-400 text-sm">Candidate Associate · Member #65050</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <span class="text-teal-400 text-sm font-semibold tracking-[2px]">CREDENTIALS</span>
+                    <h2 class="section-heading text-3xl md:text-4xl font-display tracking-tighter mt-3 mb-8">Certifications</h2>
+
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-start gap-x-3 bg-slate-950/60 border border-slate-800 rounded-2xl px-5 py-4">
+                            <i class="fa-solid fa-certificate text-teal-400 mt-0.5"></i>
+                            <div>
+                                <div class="font-semibold">FinOps Certified Practitioner</div>
+                                <div class="text-xs text-slate-400">FinOps Foundation</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-x-3 bg-slate-950/60 border border-slate-800 rounded-2xl px-5 py-4">
+                            <i class="fa-solid fa-certificate text-teal-400 mt-0.5"></i>
+                            <div>
+                                <div class="font-semibold">AWS Cloud Practitioner</div>
+                                <div class="text-xs text-slate-400">AWS Cloud Quest</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-x-3 bg-slate-950/60 border border-slate-800 rounded-2xl px-5 py-4">
+                            <i class="fa-solid fa-certificate text-teal-400 mt-0.5"></i>
+                            <div>
+                                <div class="font-semibold">AWS ML Foundations & Generative AI</div>
+                                <div class="text-xs text-slate-400">AWS</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-x-3 bg-slate-950/60 border border-slate-800 rounded-2xl px-5 py-4">
+                            <i class="fa-solid fa-certificate text-teal-400 mt-0.5"></i>
+                            <div>
+                                <div class="font-semibold">Generative AI with AWS</div>
+                                <div class="text-xs text-slate-400">Udacity</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-x-3 bg-slate-950/60 border border-slate-800 rounded-2xl px-5 py-4">
+                            <i class="fa-solid fa-certificate text-teal-400 mt-0.5"></i>
+                            <div>
+                                <div class="font-semibold">Alteryx Designer Core</div>
+                                <div class="text-xs text-slate-400">Alteryx Micro-Credential</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-x-3 bg-slate-950/60 border border-slate-800 rounded-2xl px-5 py-4">
+                            <i class="fa-solid fa-certificate text-teal-400 mt-0.5"></i>
+                            <div>
+                                <div class="font-semibold">Introduction to FinOps</div>
+                                <div class="text-xs text-slate-400">FinOps Foundation</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============= CV / DOWNLOAD ============= -->
+    <section class="max-w-6xl mx-auto px-6 py-20">
+        <div class="bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800 rounded-3xl p-8 md:p-12 relative overflow-hidden">
+            <div class="absolute inset-0 data-grid opacity-40 pointer-events-none"></div>
+            <div class="relative md:grid md:grid-cols-12 gap-x-8 items-center">
+                <div class="md:col-span-7">
+                    <span class="text-teal-400 text-sm font-semibold tracking-[2px]">CHAPTER 07</span>
+                    <h2 class="text-3xl md:text-4xl font-display tracking-tighter mt-2">Want the full picture?</h2>
+                    <p class="mt-4 text-slate-300 max-w-lg">
+                        Download the complete CV with detailed responsibilities, achievements, technical proficiencies and references — formatted for ATS and recruiter-friendly review.
+                    </p>
+                </div>
+                <div class="md:col-span-5 mt-8 md:mt-0 flex flex-col gap-3">
+                    <a href="Tobi_Olabode_CV.pdf" download
+                       class="inline-flex items-center justify-center gap-x-3 px-7 py-4 rounded-2xl bg-teal-500 hover:bg-teal-400 text-slate-950 font-semibold text-sm tracking-wide transition-all shadow-lg shadow-teal-500/25">
+                        <i class="fa-solid fa-file-pdf"></i>
+                        Download CV (PDF)
+                    </a>
+                    <a href="Tobi_Olabode_CV.pdf" target="_blank" rel="noopener"
+                       class="inline-flex items-center justify-center gap-x-3 px-7 py-4 rounded-2xl border border-slate-700 hover:border-teal-500/60 hover:bg-slate-900 text-sm font-semibold transition-all">
+                        <i class="fa-solid fa-eye"></i>
+                        Preview in browser
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============= CONTACT ============= -->
+    <section id="contact" class="bg-slate-900/40 border-y border-slate-800 py-20 md:py-24">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-teal-400 text-sm font-semibold tracking-[2px]">LET'S CONNECT</span>
+                <h2 class="text-4xl md:text-5xl font-display tracking-tighter mt-3">Ready to optimise your cloud spend?</h2>
+                <p class="mt-4 text-lg text-slate-400">I'm always open to meaningful conversations about FinOps, cloud strategy, or new opportunities.</p>
+            </div>
+
+            <div class="grid md:grid-cols-12 gap-8 max-w-5xl mx-auto">
+                <!-- Contact options -->
+                <div class="md:col-span-5 space-y-3">
+                    <a href="mailto:oluwamarshal@gmail.com"
+                       class="group flex items-center gap-x-4 p-5 rounded-2xl border border-slate-800 hover:border-teal-500/60 hover:bg-slate-900/60 transition-all bg-slate-950/50">
+                        <div class="w-12 h-12 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-envelope text-teal-400 text-xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="text-xs text-slate-500 tracking-widest">EMAIL</div>
+                            <div class="font-medium text-sm">oluwamarshal@gmail.com</div>
+                        </div>
+                        <i class="fa-solid fa-arrow-right text-slate-600 group-hover:text-teal-400 group-hover:translate-x-1 transition-all"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/tobiolabode" target="_blank" rel="noopener"
+                       class="group flex items-center gap-x-4 p-5 rounded-2xl border border-slate-800 hover:border-teal-500/60 hover:bg-slate-900/60 transition-all bg-slate-950/50">
+                        <div class="w-12 h-12 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i class="fa-brands fa-linkedin text-teal-400 text-xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="text-xs text-slate-500 tracking-widest">LINKEDIN</div>
+                            <div class="font-medium text-sm">linkedin.com/in/tobiolabode</div>
+                        </div>
+                        <i class="fa-solid fa-arrow-right text-slate-600 group-hover:text-teal-400 group-hover:translate-x-1 transition-all"></i>
+                    </a>
+
+                    <a href="https://github.com/Johhnmarshal" target="_blank" rel="noopener"
+                       class="group flex items-center gap-x-4 p-5 rounded-2xl border border-slate-800 hover:border-teal-500/60 hover:bg-slate-900/60 transition-all bg-slate-950/50">
+                        <div class="w-12 h-12 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i class="fa-brands fa-github text-teal-400 text-xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="text-xs text-slate-500 tracking-widest">GITHUB</div>
+                            <div class="font-medium text-sm">github.com/Johhnmarshal</div>
+                        </div>
+                        <i class="fa-solid fa-arrow-right text-slate-600 group-hover:text-teal-400 group-hover:translate-x-1 transition-all"></i>
+                    </a>
+
+                    <a href="https://medium.com/@tobiolabode" target="_blank" rel="noopener"
+                       class="group flex items-center gap-x-4 p-5 rounded-2xl border border-slate-800 hover:border-teal-500/60 hover:bg-slate-900/60 transition-all bg-slate-950/50">
+                        <div class="w-12 h-12 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i class="fa-brands fa-medium text-teal-400 text-xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="text-xs text-slate-500 tracking-widest">MEDIUM</div>
+                            <div class="font-medium text-sm">medium.com/@tobiolabode</div>
+                        </div>
+                        <i class="fa-solid fa-arrow-right text-slate-600 group-hover:text-teal-400 group-hover:translate-x-1 transition-all"></i>
+                    </a>
+                </div>
+
+                <!-- Contact form -->
+                <div class="md:col-span-7">
+                    <!--
+                      Contact form: wired to FormSubmit.co (no signup needed).
+                      First submission triggers a one-time email verification to oluwamarshal@gmail.com;
+                      after that, all submissions arrive automatically. Falls back to mailto on JS error.
+                      To switch providers later (e.g. Formspree, Web3Forms), just change the action attribute.
+                    -->
+                    <form id="contact-form"
+                          action="https://formsubmit.co/ajax/oluwamarshal@gmail.com"
+                          method="POST"
+                          class="bg-slate-950/50 border border-slate-800 rounded-3xl p-7 md:p-8 space-y-4">
+
+                        <!-- FormSubmit configuration -->
+                        <input type="hidden" name="_subject" value="New portfolio enquiry">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="false">
+
+                        <div class="flex items-center gap-x-2 text-xs text-slate-500 mb-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                            <span class="tracking-widest">QUICK MESSAGE</span>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="cf-name" class="block text-xs font-semibold tracking-widest text-slate-400 mb-2">NAME</label>
+                                <input type="text" id="cf-name" name="name" required
+                                       class="form-input w-full rounded-xl px-4 py-3 text-sm placeholder:text-slate-600"
+                                       placeholder="Your name">
+                            </div>
+                            <div>
+                                <label for="cf-email" class="block text-xs font-semibold tracking-widest text-slate-400 mb-2">EMAIL</label>
+                                <input type="email" id="cf-email" name="email" required
+                                       class="form-input w-full rounded-xl px-4 py-3 text-sm placeholder:text-slate-600"
+                                       placeholder="you@company.com">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="cf-subject" class="block text-xs font-semibold tracking-widest text-slate-400 mb-2">SUBJECT</label>
+                            <input type="text" id="cf-subject" name="subject"
+                                   class="form-input w-full rounded-xl px-4 py-3 text-sm placeholder:text-slate-600"
+                                   placeholder="e.g. FinOps Engineer role at Acme Corp">
+                        </div>
+
+                        <div>
+                            <label for="cf-message" class="block text-xs font-semibold tracking-widest text-slate-400 mb-2">MESSAGE</label>
+                            <textarea id="cf-message" name="message" rows="5" required
+                                      class="form-input w-full rounded-xl px-4 py-3 text-sm placeholder:text-slate-600 resize-none"
+                                      placeholder="Tell me a bit about what you're working on..."></textarea>
+                        </div>
+
+                        <!-- Honeypot anti-spam -->
+                        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+                        <button type="submit"
+                                class="w-full inline-flex items-center justify-center gap-x-3 px-6 py-4 rounded-xl bg-teal-500 hover:bg-teal-400 text-slate-950 font-semibold text-sm tracking-wide transition-all shadow-lg shadow-teal-500/25">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            Send message
+                        </button>
+
+                        <p id="form-status" class="text-xs text-center text-slate-500 hidden"></p>
+
+                        <p class="text-[11px] text-slate-600 text-center pt-2">
+                            Or email directly · <a href="mailto:oluwamarshal@gmail.com" class="text-teal-400 hover:text-teal-300">oluwamarshal@gmail.com</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- ============= FOOTER ============= -->
+    <footer class="border-t border-slate-800 py-10">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-y-4">
+            <div class="flex items-center gap-x-3">
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-teal-400 to-emerald-600 flex items-center justify-center">
+                    <span class="text-white font-bold text-sm">T</span>
+                </div>
+                <div class="text-xs text-slate-500">
+                    © 2026 Tobi John Olabode · Cloud FinOps Practitioner
+                </div>
+            </div>
+            <div class="flex items-center gap-x-5 text-slate-500">
+                <a href="https://www.linkedin.com/in/tobiolabode" target="_blank" rel="noopener" aria-label="LinkedIn" class="hover:text-teal-400 transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Johhnmarshal" target="_blank" rel="noopener" aria-label="GitHub" class="hover:text-teal-400 transition-colors"><i class="fa-brands fa-github"></i></a>
+                <a href="https://medium.com/@tobiolabode" target="_blank" rel="noopener" aria-label="Medium" class="hover:text-teal-400 transition-colors"><i class="fa-brands fa-medium"></i></a>
+                <a href="mailto:oluwamarshal@gmail.com" aria-label="Email" class="hover:text-teal-400 transition-colors"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <a href="#top" class="text-xs text-slate-500 hover:text-teal-400 transition-colors flex items-center gap-x-2">
+                Back to top <i class="fa-solid fa-arrow-up"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // ===== Mobile menu =====
+        function setupMobileMenu() {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const icon = btn.querySelector('i');
+
+            btn.addEventListener('click', () => {
+                const open = menu.classList.toggle('hidden');
+                btn.setAttribute('aria-expanded', String(!open));
+                icon.classList.toggle('fa-bars', open);
+                icon.classList.toggle('fa-times', !open);
+            });
+
+            document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                    btn.setAttribute('aria-expanded', 'false');
+                    icon.classList.add('fa-bars');
+                    icon.classList.remove('fa-times');
+                });
+            });
+        }
+
+        // ===== Smooth scroll =====
+        function setupSmoothScroll() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href === '#' || href === '#top') {
+                        e.preventDefault();
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                        return;
+                    }
+                    const target = document.querySelector(href);
+                    if (target) {
+                        e.preventDefault();
+                        const offset = 80;
+                        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+                        window.scrollTo({ top, behavior: 'smooth' });
+                    }
+                });
+            });
+        }
+
+        // ===== Active nav link =====
+        function setupActiveNav() {
+            const sections = ['about','skills','experience','case-studies','publications','contact'];
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            const onScroll = () => {
+                let current = '';
+                const y = window.scrollY + 140;
+                sections.forEach(id => {
+                    const s = document.getElementById(id);
+                    if (s && y >= s.offsetTop) current = id;
+                });
+                navLinks.forEach(l => {
+                    l.classList.toggle('active', l.getAttribute('href') === '#' + current);
+                });
+            };
+            window.addEventListener('scroll', onScroll, { passive: true });
+            onScroll();
+        }
+
+        // ===== Animated counters =====
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number[data-target]');
+            const obs = new IntersectionObserver((entries) => {
+                entries.forEach(e => {
+                    if (!e.isIntersecting) return;
+                    const el = e.target;
+                    const target = parseInt(el.dataset.target, 10);
+                    const suffix = el.dataset.suffix || '';
+                    if (Number.isNaN(target)) return;
+                    let current = 0;
+                    const inc = Math.max(1, Math.ceil(target / 40));
+                    const t = setInterval(() => {
+                        current += inc;
+                        if (current >= target) {
+                            el.textContent = target + suffix;
+                            clearInterval(t);
+                        } else {
+                            el.textContent = current + suffix;
+                        }
+                    }, 30);
+                    obs.unobserve(el);
+                });
+            }, { threshold: 0.5 });
+            counters.forEach(c => obs.observe(c));
+        }
+
+        // ===== Fade-in =====
+        function setupFadeIns() {
+            const obs = new IntersectionObserver((entries) => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) {
+                        e.target.classList.add('visible');
+                        obs.unobserve(e.target);
+                    }
+                });
+            }, { threshold: 0.12 });
+            document.querySelectorAll('.experience-card, .case-study').forEach(el => {
+                el.classList.add('fade-in');
+                obs.observe(el);
+            });
+        }
+
+        // ===== Navbar shadow on scroll =====
+        function setupNavbarEffect() {
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                navbar.classList.toggle('shadow-2xl', window.scrollY > 30);
+                navbar.classList.toggle('border-slate-700', window.scrollY > 30);
+            }, { passive: true });
+        }
+
+        // ===== Contact form =====
+        function setupContactForm() {
+            const form = document.getElementById('contact-form');
+            const status = document.getElementById('form-status');
+            if (!form) return;
+
+            const mailtoFallback = () => {
+                const name = (form.name.value || '').trim();
+                const email = (form.email.value || '').trim();
+                const subject = (form.subject.value || '').trim() || 'Portfolio enquiry';
+                const message = (form.message.value || '').trim();
+                const body = `From: ${name} <${email}>\n\n${message}`;
+                window.location.href = `mailto:oluwamarshal@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            };
+
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                status.classList.remove('hidden');
+                status.textContent = 'Sending...';
+                status.className = 'text-xs text-center text-slate-400';
+
+                // Honeypot: if filled, silently succeed (it's a bot)
+                if (form._gotcha && form._gotcha.value) {
+                    form.reset();
+                    status.textContent = '✓ Message sent.';
+                    status.className = 'text-xs text-center text-emerald-400';
+                    return;
+                }
+
+                // Build payload — FormSubmit.co's /ajax/ endpoint expects JSON.
+                const isFormSubmit = form.action.includes('formsubmit.co/ajax');
+                const payload = {
+                    name: form.name.value,
+                    email: form.email.value,
+                    subject: form.subject.value || 'Portfolio enquiry',
+                    message: form.message.value
+                };
+                // Pass through hidden FormSubmit config inputs if present
+                form.querySelectorAll('input[type=hidden]').forEach(i => { if (i.name && i.name.startsWith('_')) payload[i.name] = i.value; });
+
+                try {
+                    const res = await fetch(form.action, {
+                        method: 'POST',
+                        headers: isFormSubmit
+                            ? { 'Content-Type': 'application/json', 'Accept': 'application/json' }
+                            : { 'Accept': 'application/json' },
+                        body: isFormSubmit ? JSON.stringify(payload) : new FormData(form)
+                    });
+                    if (res.ok) {
+                        form.reset();
+                        status.textContent = '✓ Message sent — I will get back to you shortly.';
+                        status.className = 'text-xs text-center text-emerald-400';
+                    } else {
+                        throw new Error('HTTP ' + res.status);
+                    }
+                } catch (err) {
+                    // Network or service error → open user's email client with details pre-filled
+                    status.textContent = 'Network issue — opening your email client as a fallback…';
+                    status.className = 'text-xs text-center text-amber-400';
+                    setTimeout(mailtoFallback, 600);
+                }
+            });
+        }
+
+        // ===== Boot =====
+        window.addEventListener('DOMContentLoaded', () => {
+            setupMobileMenu();
+            setupSmoothScroll();
+            setupActiveNav();
+            animateCounters();
+            setupFadeIns();
+            setupNavbarEffect();
+            setupContactForm();
+            console.log('%c[Portfolio] Tobi Olabode · FinOps · loaded.', 'color:#14b8a6;font-weight:bold');
+        });
+    </script>
+</body>
+</html>
