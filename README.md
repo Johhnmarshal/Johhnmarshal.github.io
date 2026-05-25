@@ -103,6 +103,53 @@ Change copy directly in `index.html` — sections are clearly commented (`<!-- =
 - **Case studies** — each is one `<article class="case-study">`. Duplicate one to add another.
 - **Accent colour** — change `#14b8a6` (the teal) globally with find-replace if you want a different brand colour.
 
+## Publishing a blog post (Jekyll)
+
+Your blog lives on your own domain at `https://tobiolabode.tech/blog/` and is built automatically by GitHub Pages using Jekyll. **To publish a new article, you only create one Markdown file** — no HTML, no layout work.
+
+1. In the `_posts/` folder, create a file named with this exact pattern:
+   ```
+   YYYY-MM-DD-a-short-slug.md
+   ```
+   e.g. `2026-06-15-rightsizing-without-the-drama.md`
+
+2. At the top of the file, add this block (called "front matter"):
+   ```yaml
+   ---
+   title: "Your Article Title"
+   date: 2026-06-15
+   description: "One or two sentences that show under the title and in search results."
+   ---
+   ```
+
+3. Below the closing `---`, write your article in **Markdown**:
+   ```markdown
+   ## A section heading
+
+   A normal paragraph. **Bold** and *italic* work. Add a [link](https://example.com).
+
+   - bullet one
+   - bullet two
+
+   > A pull quote.
+   ```
+
+4. Save, then run `deploy.bat` (or `git add . && git commit -m "New post" && git push`). GitHub Pages rebuilds in ~1 minute and the post appears automatically on `/blog/`, styled to match the site. The layout, date, and "min read" estimate are handled for you.
+
+**That's it.** You never touch HTML or the layout files. Optionally, add the new post's URL to `sitemap.xml` for slightly faster Google discovery, but it's not required — Google finds new posts by following links from the blog index.
+
+### Files that power the blog
+
+| File | Purpose |
+|---|---|
+| `_config.yml` | Site-wide Jekyll settings (title, URL, permalinks). |
+| `_layouts/default.html` | Shared shell: navbar, fonts, footer. |
+| `_layouts/post.html` | How each article is rendered. |
+| `blog/index.html` | The blog landing page that lists all posts. |
+| `_posts/*.md` | Your articles — one Markdown file each. |
+
+> **Important:** the repo no longer contains a `.nojekyll` file — that file disabled Jekyll, and it's now removed so the blog can build. `deploy.bat` keeps it out automatically.
+
 ## Tech notes
 
 - **No build step.** Pure HTML + CDN-loaded Tailwind and Font Awesome.

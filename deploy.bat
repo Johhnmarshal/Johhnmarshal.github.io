@@ -36,6 +36,10 @@ if not exist .git (
 )
 
 echo.
+echo --- Removing .nojekyll from repo (Jekyll must run to build the blog) ---
+git rm --cached --ignore-unmatch .nojekyll >nul 2>nul
+
+echo.
 echo --- Staging files ---
 git add .
 
