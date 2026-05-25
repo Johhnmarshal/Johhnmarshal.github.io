@@ -56,6 +56,21 @@ if errorlevel 1 (
 )
 
 echo.
+echo --- Syncing with remote (merge any GitHub-side commits) ---
+REM Brings down commits made directly on GitHub (CNAME, verification file, etc.).
+REM -X ours keeps OUR local version for any conflicting file; new remote-only
+REM files (like CNAME) are still merged in safely.
+git pull --no-rebase --no-edit -X ours origin main
+if errorlevel 1 (
+    echo.
+    echo [WARN] Merge needed manual help. Run these two lines yourself:
+    echo     git pull --no-rebase --no-edit -X ours origin main
+    echo     git push -u origin main
+    pause
+    exit /b 1
+)
+
+echo.
 echo --- Pushing to main ---
 git push -u origin main
 if errorlevel 1 (
@@ -64,8 +79,7 @@ if errorlevel 1 (
     echo   - The repo doesn't exist yet on GitHub. Create it first:
     echo       https://github.com/new   (name it: Johhnmarshal.github.io, Public)
     echo   - Authentication needed. A browser window may pop up - sign in.
-    echo   - First-time push to a non-empty remote: try
-    echo       git push -u origin main --force
+    echo   - Try once more: git pull --no-rebase --no-edit -X ours origin main ^&^& git push
     pause
     exit /b 1
 )
