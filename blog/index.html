@@ -1,116 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Writing by Tobi John Olabode — FinOps perspectives at the intersection of cloud financial operations, data science, and engineering.">
-    <meta name="author" content="Tobi John Olabode">
-    <meta property="og:title" content="Blog | Tobi John Olabode">
-    <meta property="og:type" content="website">
-    <title>Blog | Tobi John Olabode</title>
+---
+layout: default
+title: Blog
+description: Articles on cloud cost optimization, FinOps practice, and the data side of cloud financial operations.
+---
+<header class="relative pt-20 pb-12 overflow-hidden border-b border-slate-800/60">
+    <div class="absolute inset-0 data-grid opacity-50 pointer-events-none"></div>
+    <div class="relative max-w-4xl mx-auto px-6">
+        <span class="text-teal-400 text-sm font-semibold tracking-[2px]">WRITING</span>
+        <h1 class="font-display text-5xl md:text-6xl tracking-tighter font-semibold mt-3 text-white">The FinOps Blog</h1>
+        <p class="mt-5 max-w-xl text-lg text-slate-400 leading-relaxed">
+            Notes from the field on cloud cost optimization, governance, and treating the cloud bill as the big-data problem it really is.
+        </p>
+    </div>
+</header>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<section class="max-w-4xl mx-auto px-6 py-14">
+    <div class="space-y-6">
 
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%2314b8a6%22/><text x=%2250%22 y=%2268%22 font-family=%22sans-serif%22 font-size=%2245%22 font-weight=%22700%22 fill=%22white%22 text-anchor=%22middle%22>T</text></svg>">
-
-    <style>
-        * { -webkit-font-smoothing: antialiased; }
-        body { background-color: #020817; color: #e2e8f0; }
-        ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: #020817; }
-        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
-    </style>
-</head>
-<body>
-
-    <!-- Nav -->
-    <nav class="sticky top-0 z-50 border-b border-slate-800/80 bg-slate-950/90 backdrop-blur-xl">
-        <div class="max-w-3xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="/" class="flex items-center gap-x-2.5 group">
-                <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-teal-400 to-emerald-600 flex items-center justify-center">
-                    <span class="text-white font-bold text-sm">T</span>
-                </div>
-                <div>
-                    <div class="text-sm font-semibold tracking-tight group-hover:text-teal-400 transition-colors">Tobi Olabode</div>
-                    <div class="text-[9px] text-slate-500 -mt-0.5 tracking-widest">FINOPS PRACTITIONER</div>
-                </div>
-            </a>
-            <a href="/" class="text-sm text-slate-400 hover:text-teal-400 transition-colors flex items-center gap-x-1.5">
-                <i class="fa-solid fa-arrow-left text-xs"></i>
-                Back to portfolio
-            </a>
-        </div>
-    </nav>
-
-    <main class="max-w-3xl mx-auto px-6 py-14 md:py-20">
-
-        <header class="mb-12">
-            <span class="text-teal-400 text-sm font-semibold tracking-[2px]">WRITING</span>
-            <h1 class="text-4xl md:text-5xl font-bold tracking-tighter text-white mt-2 mb-4">Blog</h1>
-            <p class="text-slate-400 text-lg">FinOps perspectives at the intersection of cloud financial operations, data science, and engineering.</p>
-        </header>
-
-        <!-- Posts -->
-        <div class="space-y-6">
-
-            <!-- Post: Beyond Advisor-Green -->
-            <a href="/blog/beyond-advisor-green/" class="block group bg-slate-900/60 border border-slate-800 rounded-3xl p-7 hover:border-teal-500/40 transition-all">
-                <div class="flex flex-wrap items-center gap-x-2 gap-y-2 text-xs text-slate-500 mb-3">
-                    <span class="px-2.5 py-0.5 bg-teal-500/10 text-teal-400 rounded-full font-semibold tracking-wider">NEW</span>
-                    <span class="px-2.5 py-0.5 bg-slate-800 text-slate-400 rounded-full">Open Source</span>
-                    <span class="px-2.5 py-0.5 bg-slate-800 text-slate-400 rounded-full">Multi-Cloud</span>
-                    <span class="px-2.5 py-0.5 bg-slate-800 text-slate-400 rounded-full">Cost Optimisation</span>
-                    <span class="ml-auto">23 Jun 2026 · 12 min read</span>
-                </div>
-                <h2 class="text-xl md:text-2xl font-bold tracking-tight text-white group-hover:text-teal-400 transition-colors mb-2">
-                    Beyond Advisor-Green: Building an Open-Source Shadow Cost Detector for Multi-Cloud
-                </h2>
-                <p class="text-slate-400 text-[15px] leading-relaxed">
-                    Native cloud advisors are good at what they're designed for — they're not designed to surface the 10–30% of recoverable spend hiding behind all-green dashboards. Here's how I built Shadow Cost, an open-source tri-cloud FinOps webapp that goes further.
-                </p>
-                <div class="mt-4 flex items-center gap-x-2 text-teal-400 text-sm font-semibold group-hover:translate-x-1 transition-transform">
-                    Read article <i class="fa-solid fa-arrow-right text-xs"></i>
-                </div>
-            </a>
-
-            <!-- Post: Medium — Big Data Problem -->
-            <a href="https://medium.com/@tobiolabode/why-your-cloud-bill-is-a-big-data-problem-a-data-scientists-take-on-finops-in-2026-31550f3d8fe0"
-               target="_blank" rel="noopener"
-               class="block group bg-slate-900/60 border border-slate-800 rounded-3xl p-7 hover:border-teal-500/40 transition-all">
-                <div class="flex flex-wrap items-center gap-x-2 gap-y-2 text-xs text-slate-500 mb-3">
-                    <span class="px-2.5 py-0.5 bg-slate-800 text-slate-400 rounded-full">Medium</span>
-                    <span class="px-2.5 py-0.5 bg-slate-800 text-slate-400 rounded-full">Data Science</span>
-                    <span class="px-2.5 py-0.5 bg-slate-800 text-slate-400 rounded-full">FinOps</span>
-                    <span class="ml-auto">2026 · <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Medium</span>
-                </div>
-                <h2 class="text-xl md:text-2xl font-bold tracking-tight text-white group-hover:text-teal-400 transition-colors mb-2">
-                    Why Your Cloud Bill Is a Big Data Problem
-                </h2>
-                <p class="text-slate-400 text-[15px] leading-relaxed">
-                    A data scientist's take on FinOps in 2026 — examining how cloud billing has crossed the threshold from spreadsheet exercise into a genuine big-data engineering and analytics challenge.
-                </p>
-                <div class="mt-4 flex items-center gap-x-2 text-teal-400 text-sm font-semibold group-hover:translate-x-1 transition-transform">
-                    Read on Medium <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
-                </div>
-            </a>
-
-        </div>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="border-t border-slate-800 py-10 mt-10">
-        <div class="max-w-3xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-y-4">
-            <div class="text-xs text-slate-500">© 2026 Tobi John Olabode · Cloud FinOps Practitioner</div>
-            <div class="flex items-center gap-x-5 text-slate-500">
-                <a href="https://www.linkedin.com/in/tobiolabode" target="_blank" rel="noopener" aria-label="LinkedIn" class="hover:text-teal-400 transition-colors"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/Johhnmarshal" target="_blank" rel="noopener" aria-label="GitHub" class="hover:text-teal-400 transition-colors"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.youtube.com/@TheFinOpsArchitect" target="_blank" rel="noopener" aria-label="YouTube" class="hover:text-red-400 transition-colors"><i class="fa-brands fa-youtube"></i></a>
-                <a href="https://medium.com/@tobiolabode" target="_blank" rel="noopener" aria-label="Medium" class="hover:text-teal-400 transition-colors"><i class="fa-brands fa-medium"></i></a>
+        <!-- Post: Beyond Advisor-Green (static page) -->
+        <a href="/blog/beyond-advisor-green/"
+           class="block group bg-slate-900/60 border border-slate-800 rounded-3xl p-7 md:p-8 transition-all hover:-translate-y-1 hover:border-teal-500/40 hover:shadow-2xl hover:shadow-slate-950/60">
+            <div class="flex flex-wrap items-center gap-x-3 gap-y-2 text-xs text-slate-500 mb-3">
+                <span class="px-2.5 py-0.5 bg-teal-500/10 text-teal-400 rounded-full font-semibold tracking-wider">NEW</span>
+                <span class="px-2.5 py-0.5 bg-slate-800 text-slate-400 rounded-full">Open Source</span>
+                <span class="px-2.5 py-0.5 bg-slate-800 text-slate-400 rounded-full">Multi-Cloud</span>
+                <span class="ml-auto">23 Jun 2026 · 12 min read</span>
             </div>
-        </div>
-    </footer>
+            <h2 class="font-display text-2xl md:text-3xl font-semibold tracking-tight text-slate-100 group-hover:text-teal-400 transition-colors">
+                Beyond Advisor-Green: Building an Open-Source Shadow Cost Detector for Multi-Cloud
+            </h2>
+            <p class="mt-3 text-slate-400 text-[15px] leading-relaxed">
+                Native cloud advisors are good at what they're designed for — they're not designed to surface the 10–30% of recoverable spend hiding behind all-green dashboards. Here's how I built Shadow Cost, an open-source tri-cloud FinOps webapp that goes further.
+            </p>
+            <span class="mt-5 inline-flex items-center gap-x-2 text-teal-400 font-semibold text-sm group-hover:translate-x-1 transition-transform">
+                Read article <i class="fa-solid fa-arrow-right text-xs"></i>
+            </span>
+        </a>
 
-</body>
-</html>
+        {% for post in site.posts %}
+        <a href="{{ post.url | relative_url }}"
+           class="block group bg-slate-900/60 border border-slate-800 rounded-3xl p-7 md:p-8 transition-all hover:-translate-y-1 hover:border-teal-500/40 hover:shadow-2xl hover:shadow-slate-950/60">
+            <div class="flex items-center gap-x-3 text-xs text-slate-500 mb-3">
+                <span class="px-2.5 py-0.5 bg-teal-500/10 text-teal-400 rounded-full font-semibold tracking-wider">FINOPS</span>
+                <span>{{ post.date | date: "%B %-d, %Y" }}</span>
+                {% assign words = post.content | strip_html | number_of_words %}
+                <span>· {{ words | divided_by: 200 | plus: 1 }} min read</span>
+            </div>
+            <h2 class="font-display text-2xl md:text-3xl font-semibold tracking-tight text-slate-100 group-hover:text-teal-400 transition-colors">{{ post.title }}</h2>
+            {% if post.description %}<p class="mt-3 text-slate-400 text-[15px] leading-relaxed">{{ post.description }}</p>{% endif %}
+            <span class="mt-5 inline-flex items-center gap-x-2 text-teal-400 font-semibold text-sm group-hover:translate-x-1 transition-transform">
+                Read article <i class="fa-solid fa-arrow-right text-xs"></i>
+            </span>
+        </a>
+        {% endfor %}
+
+    </div>
+
+    <div class="mt-12 text-center">
+        <a href="https://medium.com/@tobiolabode" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-x-2 text-sm text-slate-400 hover:text-teal-400 transition-colors">
+            <i class="fa-brands fa-medium"></i> Also on Medium <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+        </a>
+    </div>
+</section>
