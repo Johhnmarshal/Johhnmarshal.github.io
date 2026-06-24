@@ -25,6 +25,79 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does Tobi John Olabode specialise in?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tobi specialises in cloud financial operations (FinOps) across AWS, Azure, and GCP — helping organisations identify and eliminate wasted cloud spend, build governance frameworks, and create engineering cultures where cost is a first-class concern. Over 6 years he has consistently delivered 25%+ reductions in cloud spend through automated tooling, right-sizing programmes, commitment strategies, and cross-functional stakeholder alignment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What measurable cloud cost savings has Tobi delivered?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Across engagements, Tobi has contributed to over £8.35M in total cloud savings at a 26%+ effective savings rate. At Taylor & Eyre he drove a 25%+ reduction in AWS cloud spend through right-sizing, Reserved Instance and Savings Plan optimisation, and automated anomaly detection. At Next Retail he is building the FinOps function from scratch, implementing governance policies, automated Power BI cost dashboards, and chargeback frameworks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which cloud platforms and FinOps tools does Tobi work with?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tobi is expert-level across Azure and AWS, and proficient on GCP. Tools include Azure Cost Management, AWS Cost Explorer, Apptio Cloudability, CloudHealth, Power BI, Terraform, PowerShell, Azure Policy, SCPs, and custom Python scripts for anomaly detection, idle resource discovery, and commitment coverage modelling."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Shadow Cost and why did Tobi build it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Shadow Cost is an open-source multi-cloud FinOps web application built to surface hidden costs that native cloud advisor dashboards miss — including cross-cloud commitment gaps, idle-but-tagged resources, misallocated chargeback, and egress blind spots. It runs five detection categories across AWS, Azure, and GCP simultaneously and is available on GitHub."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Tobi approach building a FinOps practice from scratch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tobi follows a three-phase approach: Visibility → Accountability → Optimisation. First, full cost visibility by fixing tagging and building a reporting layer. Second, accountability through chargeback or showback models and KPI definition. Third, ongoing optimisation via right-sizing, commitment planning, waste elimination automation, and anomaly detection."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What makes Tobi different from other FinOps practitioners?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Three differentiators: a data science MSc enabling statistical modelling beyond threshold alerts; a finance and accounting undergraduate degree plus banking experience for CFO-level financial communication; and a builder mentality that produces custom tooling like Shadow Cost when existing tools fall short."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Tobi open to new roles or consulting engagements?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Tobi is based in the United Kingdom, open to remote and hybrid roles worldwide, and available for FinOps practitioner roles, cloud cost optimisation programmes, and building FinOps functions from scratch across AWS, Azure, and GCP."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Tobi have experience training engineering teams on FinOps?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — Tobi has trained and upskilled 50+ engineers in cloud cost awareness and FinOps best practices through formal sessions, one-to-one enablement, and embedding cost hygiene into sprint ceremonies and architecture reviews."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
       "@type": "Person",
       "name": "Tobi John Olabode",
       "jobTitle": "Cloud FinOps Practitioner",
@@ -202,6 +275,10 @@
         ::-webkit-scrollbar-track { background: #0f172a; }
         ::-webkit-scrollbar-thumb { background: #334155; border-radius: 6px; }
         ::-webkit-scrollbar-thumb:hover { background: #14b8a6; }
+
+        /* FAQ accordion */
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary .fa-plus { transform: rotate(45deg); }
 
         /* Reduced motion */
         @media (prefers-reduced-motion: reduce) {
@@ -567,23 +644,70 @@
                     <div class="md:sticky md:top-28">
                         <div class="font-mono text-xs text-teal-400 tracking-widest">OCT 2025 — PRESENT</div>
                         <div class="font-display font-semibold text-lg mt-1 tracking-tight">Next Retail Limited</div>
-                        <div class="text-teal-400 text-sm">Cloud FinOps Analyst</div>
+                        <div class="text-teal-400 text-sm">Senior FinOps Analyst</div>
                         <div class="text-xs text-slate-500 mt-0.5">Azure & GCP</div>
                     </div>
                 </div>
 
                 <div class="md:col-span-9">
                     <div class="experience-card bg-slate-900/60 border border-slate-800 rounded-3xl p-7 md:p-8 modern-shadow">
-                        <p class="text-[15px] text-slate-300 mb-5">
-                            <span class="font-semibold text-white">Building FinOps from the ground up</span> at a major UK retail organisation, embedding governance and accountability across cloud spend.
+                        <p class="text-[15px] text-slate-300 mb-6">
+                            <span class="font-semibold text-white">Building FinOps from the ground up</span> at a major UK retail organisation — designing governance, tooling, and culture across Azure & GCP from scratch.
                         </p>
-                        <ul class="space-y-2.5 text-[15px] text-slate-300">
-                            <li class="flex gap-x-3"><span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>Developing and implementing FinOps policies, budgets, and governance frameworks from scratch</li>
-                            <li class="flex gap-x-3"><span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>Driving cost optimisation through resource rightsizing, reservations, and auto-scaling strategies</li>
-                            <li class="flex gap-x-3"><span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>Building automated Power BI dashboards leveraging Terraform & PowerShell for reporting efficiency</li>
-                            <li class="flex gap-x-3"><span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>Defining and reporting KPIs to foster financial accountability and responsible cloud usage</li>
-                            <li class="flex gap-x-3"><span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>Collaborating with architects, DevOps, finance and procurement teams to embed cost accountability</li>
-                        </ul>
+
+                        <div class="space-y-5">
+                            <!-- Category 1 -->
+                            <div>
+                                <div class="flex items-center gap-x-2 mb-2.5">
+                                    <i class="fa-solid fa-circle-dollar-to-slot text-teal-400 text-xs"></i>
+                                    <span class="text-xs font-semibold tracking-widest text-teal-400">COST OPTIMISATION & FINANCIAL MANAGEMENT</span>
+                                </div>
+                                <ul class="space-y-2 text-[15px] text-slate-300">
+                                    <li class="flex gap-x-3"><span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>Developing and implementing FinOps policies, governance frameworks and maturity assessments from scratch, driving a culture of financial accountability across engineering and finance teams</li>
+                                    <li class="flex gap-x-3"><span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>Driving significant cost-saving opportunities through strategic resource optimisation, reservations, rightsizing, workload optimisation and auto-scaling, delivering measurable ROI on cloud investments</li>
+                                    <li class="flex gap-x-3"><span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>Owning cloud budget creation, forecasting and ongoing management, ensuring accurate cost allocation and improved budgeting processes across multiple domains</li>
+                                    <li class="flex gap-x-3"><span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>Continuously monitoring and analysing cloud spend to identify trends, anomalies and optimisation opportunities using Azure Cost Management, Azure Advisor and custom tooling</li>
+                                </ul>
+                            </div>
+
+                            <!-- Category 2 -->
+                            <div>
+                                <div class="flex items-center gap-x-2 mb-2.5">
+                                    <i class="fa-solid fa-chart-bar text-teal-400 text-xs"></i>
+                                    <span class="text-xs font-semibold tracking-widest text-teal-400">AUTOMATION, REPORTING & DASHBOARDS</span>
+                                </div>
+                                <ul class="space-y-2 text-[15px] text-slate-300">
+                                    <li class="flex gap-x-3"><span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>Designed and delivered the <span class="text-white font-medium">FinOps Hub</span> (Monthly, AI and Daily Cost Dashboards), providing real-time visibility and data-driven insights for stakeholders and Domain Managers</li>
+                                    <li class="flex gap-x-3"><span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>Leveraging scripting and Infrastructure-as-Code (PowerShell, Terraform) to automate reporting, cost monitoring and anomaly detection, significantly improving efficiency and data accuracy</li>
+                                </ul>
+                            </div>
+
+                            <!-- Category 3 -->
+                            <div>
+                                <div class="flex items-center gap-x-2 mb-2.5">
+                                    <i class="fa-solid fa-shield-halved text-teal-400 text-xs"></i>
+                                    <span class="text-xs font-semibold tracking-widest text-teal-400">GOVERNANCE, MATURITY & STRATEGIC INITIATIVES</span>
+                                </div>
+                                <ul class="space-y-2 text-[15px] text-slate-300">
+                                    <li class="flex gap-x-3"><span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>Led Product Tag Implementation and supported the development of showback/chargeback models to provide true cost visibility for shared infrastructure across product and domain teams</li>
+                                    <li class="flex gap-x-3"><span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>Set KPIs and established Monthly Domain Cost Review Meetings, presenting cost optimisation progress and dashboard changes directly to Domain Managers and senior leadership</li>
+                                    <li class="flex gap-x-3"><span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>Contributing to the evaluation and business case for advanced FinOps tooling to enable more granular, proactive cost recommendations and replace existing solutions</li>
+                                </ul>
+                            </div>
+
+                            <!-- Category 4 -->
+                            <div>
+                                <div class="flex items-center gap-x-2 mb-2.5">
+                                    <i class="fa-solid fa-users text-teal-400 text-xs"></i>
+                                    <span class="text-xs font-semibold tracking-widest text-teal-400">STAKEHOLDER MANAGEMENT & LEADERSHIP</span>
+                                </div>
+                                <ul class="space-y-2 text-[15px] text-slate-300">
+                                    <li class="flex gap-x-3"><span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>Presenting cost optimisation progress and dashboard changes directly to Domain Managers and senior leadership, increasing visibility of FinOps impact across the organisation</li>
+                                    <li class="flex gap-x-3"><span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>Collaborating closely with cloud architects, DevOps, finance, procurement and leadership teams to embed FinOps principles and influence technical and financial decision-making</li>
+                                    <li class="flex gap-x-3"><span class="mt-1.5 block w-1.5 h-1.5 rounded-full bg-teal-400 flex-shrink-0"></span>Supporting FinOps maturity assessments and continuous improvement of processes across the team</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1012,7 +1136,7 @@
                     <div class="md:col-span-8">
                         <div class="flex items-center gap-x-3 text-xs text-slate-500 mb-2">
                             <span class="px-2.5 py-0.5 bg-slate-800 text-slate-400 rounded-full font-semibold tracking-wider">FEATURED</span>
-                            <span>Medium · 2026</span>
+                            <span>Medium · Jan 2026</span>
                         </div>
                         <h3 class="font-display text-xl md:text-2xl font-semibold tracking-tight group-hover:text-teal-400 transition-colors">
                             Why Your Cloud Bill Is a Big Data Problem
@@ -1087,22 +1211,8 @@
                         <div class="flex items-start gap-x-3 bg-slate-950/60 border border-slate-800 rounded-2xl px-5 py-4">
                             <i class="fa-solid fa-certificate text-teal-400 mt-0.5"></i>
                             <div>
-                                <div class="font-semibold">AWS ML Foundations & Generative AI</div>
+                                <div class="font-semibold">AWS Machine Learning Foundations & Introduction to Generative AI</div>
                                 <div class="text-xs text-slate-400">AWS</div>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-x-3 bg-slate-950/60 border border-slate-800 rounded-2xl px-5 py-4">
-                            <i class="fa-solid fa-certificate text-teal-400 mt-0.5"></i>
-                            <div>
-                                <div class="font-semibold">Generative AI with AWS</div>
-                                <div class="text-xs text-slate-400">Udacity</div>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-x-3 bg-slate-950/60 border border-slate-800 rounded-2xl px-5 py-4">
-                            <i class="fa-solid fa-certificate text-teal-400 mt-0.5"></i>
-                            <div>
-                                <div class="font-semibold">Alteryx Designer Core</div>
-                                <div class="text-xs text-slate-400">Alteryx Micro-Credential</div>
                             </div>
                         </div>
                         <div class="flex items-start gap-x-3 bg-slate-950/60 border border-slate-800 rounded-2xl px-5 py-4">
@@ -1110,6 +1220,13 @@
                             <div>
                                 <div class="font-semibold">Introduction to FinOps</div>
                                 <div class="text-xs text-slate-400">FinOps Foundation</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-x-3 bg-slate-950/60 border border-slate-800 rounded-2xl px-5 py-4">
+                            <i class="fa-solid fa-certificate text-teal-400 mt-0.5"></i>
+                            <div>
+                                <div class="font-semibold">Generative AI with AWS</div>
+                                <div class="text-xs text-slate-400">Udacity</div>
                             </div>
                         </div>
                     </div>
@@ -1143,6 +1260,123 @@
                     </a>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- ============= FAQ ============= -->
+    <section id="faq" class="max-w-6xl mx-auto px-6 py-20 md:py-24">
+        <div class="mb-12">
+            <span class="text-teal-400 text-sm font-semibold tracking-[2px]">CHAPTER 08</span>
+            <h2 class="section-heading text-4xl md:text-5xl font-display tracking-tighter mt-2">Frequently Asked Questions</h2>
+            <p class="mt-4 text-slate-400 max-w-md">Common questions from hiring managers, engineers, and FinOps teams.</p>
+        </div>
+
+        <div class="max-w-3xl space-y-4" itemscope itemtype="https://schema.org/FAQPage">
+
+            <!-- Q1 -->
+            <details class="experience-card bg-slate-900/60 border border-slate-800 rounded-2xl group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <summary class="flex items-center justify-between gap-x-4 px-7 py-5 cursor-pointer list-none">
+                    <span class="font-semibold text-[15px] leading-snug" itemprop="name">What does Tobi John Olabode specialise in?</span>
+                    <i class="fa-solid fa-plus text-teal-400 flex-shrink-0 group-open:rotate-45 transition-transform duration-200"></i>
+                </summary>
+                <div class="px-7 pb-6 text-[15px] text-slate-300 leading-relaxed" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        I specialise in cloud financial operations (FinOps) across AWS, Azure, and GCP — helping organisations identify and eliminate wasted cloud spend, build governance frameworks, and create engineering cultures where cost is a first-class concern. My background sits at the intersection of data science, financial operations, and cloud engineering, which means I can translate technical architecture decisions into clear financial outcomes. Over 6 years I've consistently delivered <strong class="text-white">25%+ reductions in cloud spend</strong> through a combination of automated tooling, right-sizing programmes, commitment strategies, and cross-functional stakeholder alignment.
+                    </div>
+                </div>
+            </details>
+
+            <!-- Q2 -->
+            <details class="experience-card bg-slate-900/60 border border-slate-800 rounded-2xl group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <summary class="flex items-center justify-between gap-x-4 px-7 py-5 cursor-pointer list-none">
+                    <span class="font-semibold text-[15px] leading-snug" itemprop="name">What measurable cloud cost savings has Tobi delivered?</span>
+                    <i class="fa-solid fa-plus text-teal-400 flex-shrink-0 group-open:rotate-45 transition-transform duration-200"></i>
+                </summary>
+                <div class="px-7 pb-6 text-[15px] text-slate-300 leading-relaxed" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        Across engagements, I've contributed to over <strong class="text-white">£8.35M in total cloud savings</strong> at a 26%+ effective savings rate. At Taylor &amp; Eyre, I drove a 25%+ reduction in AWS cloud spend through a combination of right-sizing, Reserved Instance and Savings Plan optimisation, and automated anomaly detection pipelines. At Next Retail, I'm building the FinOps function from scratch — implementing governance policies, automated Power BI cost dashboards, and chargeback frameworks that give product teams real accountability over their spend. I focus on sustainable savings, not one-off cuts.
+                    </div>
+                </div>
+            </details>
+
+            <!-- Q3 -->
+            <details class="experience-card bg-slate-900/60 border border-slate-800 rounded-2xl group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <summary class="flex items-center justify-between gap-x-4 px-7 py-5 cursor-pointer list-none">
+                    <span class="font-semibold text-[15px] leading-snug" itemprop="name">Which cloud platforms and FinOps tools does Tobi work with?</span>
+                    <i class="fa-solid fa-plus text-teal-400 flex-shrink-0 group-open:rotate-45 transition-transform duration-200"></i>
+                </summary>
+                <div class="px-7 pb-6 text-[15px] text-slate-300 leading-relaxed" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        I'm expert-level across <strong class="text-white">Azure and AWS</strong>, and proficient on <strong class="text-white">GCP</strong>. On the tooling side: Azure Cost Management, AWS Cost Explorer, Apptio Cloudability, CloudHealth, and custom-built Power BI dashboards backed by Terraform and PowerShell automation. For tagging enforcement and governance I use Azure Policy, SCPs on AWS, and custom IaC pipelines. I'm also comfortable building bespoke Python scripts and APIs for cost anomaly detection, idle resource discovery, and commitment coverage modelling — the kind of analysis that native advisor tools typically miss.
+                    </div>
+                </div>
+            </details>
+
+            <!-- Q4 -->
+            <details class="experience-card bg-slate-900/60 border border-slate-800 rounded-2xl group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <summary class="flex items-center justify-between gap-x-4 px-7 py-5 cursor-pointer list-none">
+                    <span class="font-semibold text-[15px] leading-snug" itemprop="name">What is Shadow Cost and why did Tobi build it?</span>
+                    <i class="fa-solid fa-plus text-teal-400 flex-shrink-0 group-open:rotate-45 transition-transform duration-200"></i>
+                </summary>
+                <div class="px-7 pb-6 text-[15px] text-slate-300 leading-relaxed" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <a href="/blog/beyond-advisor-green/" class="text-teal-400 hover:text-teal-300 underline underline-offset-2">Shadow Cost</a> is an open-source multi-cloud FinOps web application I built after repeatedly seeing organisations hit all-green in their native cloud advisor dashboards — yet still leaving 10–30% of recoverable spend on the table. Native advisors are designed to surface obvious wins; they aren't designed to detect cross-cloud commitment gaps, idle-but-tagged resources, misallocated chargeback, or egress blind spots. Shadow Cost runs five detection categories across AWS, Azure, and GCP simultaneously and surfaces ranked savings opportunities with owner assignment. It's available on <a href="https://github.com/Johhnmarshal" target="_blank" rel="noopener" class="text-teal-400 hover:text-teal-300 underline underline-offset-2">GitHub</a> and built to plug into existing FinOps workflows.
+                    </div>
+                </div>
+            </details>
+
+            <!-- Q5 -->
+            <details class="experience-card bg-slate-900/60 border border-slate-800 rounded-2xl group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <summary class="flex items-center justify-between gap-x-4 px-7 py-5 cursor-pointer list-none">
+                    <span class="font-semibold text-[15px] leading-snug" itemprop="name">How does Tobi approach building a FinOps practice from scratch?</span>
+                    <i class="fa-solid fa-plus text-teal-400 flex-shrink-0 group-open:rotate-45 transition-transform duration-200"></i>
+                </summary>
+                <div class="px-7 pb-6 text-[15px] text-slate-300 leading-relaxed" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        I follow a three-phase approach: <strong class="text-white">Visibility → Accountability → Optimisation</strong>. First, I get full cost visibility by fixing tagging, setting up cost allocation, and building a reporting layer (typically Power BI) that finance, engineering, and leadership can all read. Second, I establish accountability by introducing chargeback or showback models, defining KPIs, and running regular financial reviews with each cloud-owning team. Third, I drive ongoing optimisation through right-sizing analysis, commitment planning (RIs, Savings Plans, CUDs), waste elimination automation, and anomaly detection. The order matters — optimising before you have accountability is a short-term fix that doesn't stick.
+                    </div>
+                </div>
+            </details>
+
+            <!-- Q6 -->
+            <details class="experience-card bg-slate-900/60 border border-slate-800 rounded-2xl group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <summary class="flex items-center justify-between gap-x-4 px-7 py-5 cursor-pointer list-none">
+                    <span class="font-semibold text-[15px] leading-snug" itemprop="name">What makes Tobi different from other FinOps practitioners?</span>
+                    <i class="fa-solid fa-plus text-teal-400 flex-shrink-0 group-open:rotate-45 transition-transform duration-200"></i>
+                </summary>
+                <div class="px-7 pb-6 text-[15px] text-slate-300 leading-relaxed" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        Three things stand out. First, the data science background — an MSc from Cardiff University means I can build statistical models for forecasting and anomaly detection rather than relying purely on threshold alerts. Second, the finance foundation — an undergraduate degree in Management &amp; Accounting plus prior banking experience means I understand how CFOs and finance directors read a cloud bill, not just how engineers do. Third, the builder mentality — I don't just configure existing tools; I build what doesn't exist yet, which is how Shadow Cost and several internal automation pipelines came to be. The combination of all three is relatively rare in the FinOps market.
+                    </div>
+                </div>
+            </details>
+
+            <!-- Q7 -->
+            <details class="experience-card bg-slate-900/60 border border-slate-800 rounded-2xl group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <summary class="flex items-center justify-between gap-x-4 px-7 py-5 cursor-pointer list-none">
+                    <span class="font-semibold text-[15px] leading-snug" itemprop="name">Is Tobi open to new roles or consulting engagements?</span>
+                    <i class="fa-solid fa-plus text-teal-400 flex-shrink-0 group-open:rotate-45 transition-transform duration-200"></i>
+                </summary>
+                <div class="px-7 pb-6 text-[15px] text-slate-300 leading-relaxed" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        Yes — I'm currently open to opportunities. I'm based in the United Kingdom and open to remote and hybrid roles worldwide. If you're looking for a FinOps practitioner who can lead cloud cost optimisation programmes, build FinOps functions from scratch, or provide hands-on technical delivery across AWS, Azure, and GCP, I'd love to hear from you. The best way to reach me is via <a href="mailto:oluwamarshal@gmail.com" class="text-teal-400 hover:text-teal-300 underline underline-offset-2">email</a> or <a href="https://www.linkedin.com/in/tobiolabode" target="_blank" rel="noopener" class="text-teal-400 hover:text-teal-300 underline underline-offset-2">LinkedIn</a>.
+                    </div>
+                </div>
+            </details>
+
+            <!-- Q8 -->
+            <details class="experience-card bg-slate-900/60 border border-slate-800 rounded-2xl group" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <summary class="flex items-center justify-between gap-x-4 px-7 py-5 cursor-pointer list-none">
+                    <span class="font-semibold text-[15px] leading-snug" itemprop="name">Does Tobi have experience training engineering teams on FinOps?</span>
+                    <i class="fa-solid fa-plus text-teal-400 flex-shrink-0 group-open:rotate-45 transition-transform duration-200"></i>
+                </summary>
+                <div class="px-7 pb-6 text-[15px] text-slate-300 leading-relaxed" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        Yes — I've trained and upskilled <strong class="text-white">50+ engineers</strong> in cloud cost awareness and FinOps best practices. This includes formal lunch-and-learn sessions, one-to-one enablement for team leads, and embedding cost hygiene into sprint ceremonies and architecture reviews. I find that the biggest lever in any FinOps programme isn't tooling — it's changing how engineering teams think about spend. When developers understand the cost impact of their architecture decisions, savings happen organically and sustainably rather than being imposed top-down.
+                    </div>
+                </div>
+            </details>
+
         </div>
     </section>
 
