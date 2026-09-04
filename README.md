@@ -80,8 +80,8 @@ The `<img onerror>` fallback means if a file is missing, the SVG mock shows auto
 The form is pre-wired to **[FormSubmit.co](https://formsubmit.co)** — a free, no-signup service that just emails you when someone submits.
 
 **How it works:**
-- Form action: `https://formsubmit.co/ajax/oluwamarshal@gmail.com`
-- The **first** time anyone submits the form after the site goes live, FormSubmit sends a one-time confirmation email to `oluwamarshal@gmail.com` — click the link inside to activate.
+- Form action: `https://formsubmit.co/ajax/tobijohnolabode@gmail.com`
+- The **first** time anyone submits the form after the site goes live, FormSubmit sends a one-time confirmation email to `tobijohnolabode@gmail.com` — click the link inside to activate.
 - After that, every form submission lands in your inbox automatically. No dashboard, no rate limits to speak of, no account.
 
 **If JS or the network fails**, the form falls back to opening the visitor's email client with their message pre-filled — so it always works.
