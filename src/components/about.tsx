@@ -9,7 +9,15 @@ export function About() {
           <h2 id="about-heading" className="sr-only">
             About
           </h2>
-          <blockquote className="mt-5 font-serif text-3xl leading-tight text-ink md:text-4xl">
+          <div className="mt-5 border border-line">
+            <img
+              src="/Headshot/1691263405587.jpg"
+              alt="Tobi John Olabode"
+              className="block w-full object-cover"
+              style={{ aspectRatio: "4/5", objectPosition: "center top" }}
+            />
+          </div>
+          <blockquote className="mt-6 font-serif text-3xl leading-tight text-ink md:text-4xl">
             A green advisor is not the same thing as a clean bill.
           </blockquote>
           <p className="mt-6 text-sm text-muted">Based in Wales, United Kingdom.</p>
