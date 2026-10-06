@@ -70,6 +70,12 @@ export function Work() {
                   filter === "All" && index === 0 ? "min-h-80" : "min-h-72"
                 }`}
               >
+                {project.thumbnail ? (
+                  <div
+                    className="border-b border-line"
+                    dangerouslySetInnerHTML={{ __html: project.thumbnail }}
+                  />
+                ) : null}
                 <div className="flex flex-1 flex-col justify-between gap-8 p-6">
                   <div>
                     <div className="flex items-baseline justify-between gap-4">
