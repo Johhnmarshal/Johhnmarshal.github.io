@@ -1,19 +1,9 @@
-# OS / editor noise
-.DS_Store
-Thumbs.db
-desktop.ini
-*.swp
-.vscode/
-.idea/
-
-# Don't commit the deploy script's local logs (none expected, but defensive)
+node_modules/
+dist/
+.output/
+.vercel/
+.env
+.env.local
+.env.*.local
+.grok/
 *.log
-
-# Jekyll build output (GitHub Pages builds remotely; never commit this)
-_site/
-.jekyll-cache/
-.jekyll-metadata
-Gemfile.lock
-
-# .nojekyll disables Jekyll — we use Jekyll for the blog, so keep it out of the repo
-.nojekyll
