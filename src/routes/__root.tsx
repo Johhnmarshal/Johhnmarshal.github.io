@@ -1,6 +1,4 @@
 import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-router";
-import { AuthProvider } from "@/lib/auth/provider";
-import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import appCss from "../styles.css?url";
 
 const APP_NAME = "Tobi John Olabode";
@@ -41,13 +39,10 @@ function Root() {
         <HeadContent />
       </head>
       <body>
-        <PreviewHostBridge />
         <a className="skip-link" href="#main">
           Skip to content
         </a>
-        <AuthProvider>
-          <Outlet />
-        </AuthProvider>
+        <Outlet />
         <Scripts />
       </body>
     </html>

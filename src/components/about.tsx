@@ -24,7 +24,7 @@ export function About() {
               Before that, at Taylor & Eyre, the estate was AWS. Cloud waste came down by a quarter. A Python reporting system retired most of the manual pack. Tagging and service control policies made allocation something finance could trust.
             </p>
             <p>
-              The years before cloud were in banking — equity trades, reconciliation, compliance. An MSc in Data Science at Cardiff is why I still treat the bill as a dataset, not a spreadsheet that happens to be large. The same habit now covers generative AI: tokens, models, and who owns them. In 2026 I contributed to the FinOps Foundation working group on practical scenarios for data cloud platforms.
+              The years before cloud were in banking — at FBNQuest, leading a team of six through equity trades, reconciliation, and MiFID II compliance at 99%+ accuracy. The discipline of a figure that has to survive audit. An MSc in Data Science at Cardiff is why I treat the bill as a dataset, not a spreadsheet that happens to be large. The same habit now covers generative AI: tokens, models, and who owns the cost. In 2026, named contributor to the FinOps Foundation working group on practical scenarios for data-cloud cost.
             </p>
           </div>
 

@@ -113,9 +113,9 @@ export const projects: Project[] = [
     title: "FinOps for data cloud platforms",
     category: "Community",
     context: "FinOps Foundation · June 2026",
-    outcome: "Working group contributor",
+    outcome: "Named contributor · FinOps Foundation",
     summary:
-      "Named contributor to the FinOps Foundation paper on practical scenarios for data-cloud cost: idle spend, tagging, query-level attribution, anomaly response, and chargeback. Written for Snowflake, and built to carry to Databricks, Fabric, BigQuery, and Redshift.",
+      "Named in the acknowledgments of the FinOps Foundation's practical scenarios paper for data-cloud cost governance. Scenarios cover idle spend, tagging, query-level attribution, anomaly response, and chargeback — written for Snowflake, designed to carry to Databricks, Fabric, BigQuery, and Redshift.",
     href: "https://www.finops.org/wg/finops-for-data-cloud-platforms-practical-scenarios/",
     hrefLabel: "Read on FinOps.org",
   },
@@ -189,7 +189,7 @@ export const credentials = [
   "FinOps Certified Practitioner — FinOps Foundation",
   "AWS Cloud Practitioner — AWS Cloud Quest",
   "AWS Machine Learning Foundations & Introduction to Generative AI — AWS",
-  "Introduction to FinOps — FinOps Foundation",
+  "Cloud GreenOps for AI — Greenpixie",
   "Generative AI with AWS — Udacity",
 ] as const;
 
@@ -210,6 +210,6 @@ export const roles = [
     dates: "Feb 2019 — Sep 2022",
     org: "FBNQuest Merchant Bank",
     title: "Senior Transaction Analyst",
-    note: "Regulated financial operations at investment-bank standard: equity trades, reconciliation, and compliance. Where every figure has to survive audit.",
+    note: "Led a team of six through equity trades, reconciliation, and MiFID II compliance at 99%+ accuracy. The practice where a figure has to survive audit before it leaves the desk.",
   },
 ] as const;
