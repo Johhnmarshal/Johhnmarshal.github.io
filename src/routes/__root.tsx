@@ -16,7 +16,7 @@ const STRUCTURED_DATA = JSON.stringify([
     familyName: "Olabode",
     jobTitle: "Senior FinOps Analyst",
     url: SITE_URL,
-    image: `${SITE_URL}/Headshot/1691263405587.jpg`,
+    image: `${SITE_URL}/avatar.jpg`,
     // disambiguates from other people named Tobi Olabode
     disambiguatingDescription:
       "FinOps practitioner based in Wales, UK. Not to be confused with Tobi Olabode the machine-learning engineer (London) or other people sharing the Olabode surname. Full legal name: Tobi John Olabode.",
@@ -163,7 +163,9 @@ export const Route = createRootRoute({
     ],
     links: [
       { rel: "canonical", href: SITE_URL },
-      { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+      { rel: "icon", type: "image/jpeg", href: "/avatar.jpg" },
+      { rel: "icon", type: "image/jpeg", sizes: "512x512", href: "/avatar.jpg" },
+      { rel: "apple-touch-icon", sizes: "512x512", href: "/avatar.jpg" },
       { rel: "stylesheet", href: appCss },
       { rel: "manifest", href: "/__grok/manifest.webmanifest" },
       { rel: "apple-touch-icon", href: "/__grok/icon-180.png" },
