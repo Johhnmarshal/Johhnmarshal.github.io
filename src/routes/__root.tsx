@@ -4,38 +4,90 @@ import appCss from "../styles.css?url";
 const SITE_URL = "https://tobiolabode.tech";
 const APP_NAME = "Tobi John Olabode";
 const DESCRIPTION =
-  "Senior FinOps practitioner across Azure, AWS and GCP. I design the frameworks, dashboards and habits that turn a cloud bill into a decision — including the token economics of generative AI. Wales, United Kingdom.";
+  "Tobi John Olabode — Senior FinOps practitioner based in Wales, UK. Multi-cloud cost governance across Azure, AWS and GCP: frameworks, dashboards, and the token economics of generative AI. FinOps Certified Practitioner.";
 
 const STRUCTURED_DATA = JSON.stringify([
   {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Tobi John Olabode",
+    givenName: "Tobi",
+    additionalName: "John",
+    familyName: "Olabode",
     jobTitle: "Senior FinOps Analyst",
     url: SITE_URL,
+    image: `${SITE_URL}/Headshot/1691263405587.jpg`,
+    // disambiguates from other people named Tobi Olabode
+    disambiguatingDescription:
+      "FinOps practitioner based in Wales, UK. Not to be confused with Tobi Olabode the machine-learning engineer (London) or other people sharing the Olabode surname. Full legal name: Tobi John Olabode.",
+    description: DESCRIPTION,
     sameAs: [
       "https://www.linkedin.com/in/tobiolabode",
       "https://github.com/Johhnmarshal",
       "https://medium.com/@tobiolabode",
       "https://www.youtube.com/@TheFinOpsArchitect",
     ],
+    hasCredential: [
+      {
+        "@type": "EducationalOccupationalCredential",
+        name: "FinOps Certified Practitioner",
+        credentialCategory: "Professional Certification",
+        recognizedBy: { "@type": "Organization", name: "FinOps Foundation", url: "https://www.finops.org" },
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        name: "AWS Cloud Practitioner",
+        credentialCategory: "Professional Certification",
+        recognizedBy: { "@type": "Organization", name: "Amazon Web Services" },
+      },
+    ],
+    memberOf: [
+      {
+        "@type": "Organization",
+        name: "FinOps Foundation",
+        url: "https://www.finops.org",
+      },
+      {
+        "@type": "Organization",
+        name: "Operational Research Society",
+        url: "https://www.theorsociety.com",
+      },
+    ],
     alumniOf: [
-      { "@type": "CollegeOrUniversity", name: "Cardiff University" },
-      { "@type": "CollegeOrUniversity", name: "Ladoke Akintola University of Technology" },
+      {
+        "@type": "CollegeOrUniversity",
+        name: "Cardiff University",
+        url: "https://www.cardiff.ac.uk",
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        name: "Ladoke Akintola University of Technology",
+      },
     ],
     knowsAbout: [
       "FinOps",
+      "Cloud Financial Management",
       "Cloud Cost Optimisation",
-      "Azure",
-      "AWS",
-      "GCP",
+      "Azure Cost Management",
+      "AWS Cost Explorer",
+      "GCP Billing",
       "Power BI",
       "Terraform",
       "AI tokenomics",
       "FOCUS spec",
+      "Showback and chargeback",
+      "Committed use discounts",
+      "Savings plans",
+      "Right-sizing",
+      "FinOps maturity assessment",
+      "Generative AI cost governance",
     ],
-    address: { "@type": "PostalAddress", addressCountry: "GB", addressRegion: "Wales" },
-    description: DESCRIPTION,
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "GB",
+      addressRegion: "Wales",
+    },
+    nationality: { "@type": "Country", name: "United Kingdom" },
   },
   {
     "@context": "https://schema.org",
@@ -89,7 +141,7 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: `${APP_NAME} — FinOps` },
+      { title: `Tobi John Olabode — Senior FinOps · Wales, UK` },
       { name: "description", content: DESCRIPTION },
       { name: "author", content: APP_NAME },
       { name: "theme-color", content: "#f3efe6" },
