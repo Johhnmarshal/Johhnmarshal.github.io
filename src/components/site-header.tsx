@@ -8,6 +8,8 @@ const links = [
   { href: "#contact", id: "contact", label: "Contact" },
 ] as const;
 
+const blogLink = { href: "/blog", label: "Writing" };
+
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("");
@@ -50,6 +52,9 @@ export function SiteHeader() {
               {link.label}
             </a>
           ))}
+          <a href={blogLink.href} className="inline-flex min-h-11 items-center px-3 text-sm text-ink">
+            {blogLink.label}
+          </a>
         </nav>
 
         <a
@@ -83,6 +88,13 @@ export function SiteHeader() {
               {link.label}
             </a>
           ))}
+          <a
+            href={blogLink.href}
+            className="flex min-h-11 items-center text-base text-ink"
+            onClick={() => setOpen(false)}
+          >
+            {blogLink.label}
+          </a>
         </nav>
       ) : null}
     </header>
