@@ -46,7 +46,10 @@ export function SiteFooter() {
           <div>
             <p className="text-xs font-medium uppercase tracking-widest text-paper/60">Colophon</p>
             <p className="mt-4 text-sm leading-normal text-paper/80">
-              Tobi John Olabode. Senior FinOps, Wales. Set in Fraunces and Outfit.
+              Tobi John Olabode. Senior FinOps, Wales.
+            </p>
+            <p className="mt-1 text-sm text-paper/60">
+              Set in Fraunces and Outfit.
             </p>
             <p className="mt-4 text-sm text-paper/60">© 2026 tobiolabode.tech</p>
           </div>

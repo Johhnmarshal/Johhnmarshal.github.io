@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useLocation } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 
 const links = [
@@ -13,6 +14,8 @@ const blogLink = { href: "/blog", label: "Writing" };
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("");
+  const location = useLocation();
+  const onBlog = location.pathname.startsWith("/blog");
 
   useEffect(() => {
     const onScroll = () => {
@@ -32,7 +35,7 @@ export function SiteHeader() {
   return (
     <header id="top" className="sticky top-0 z-40 border-b border-line bg-paper/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3 md:px-8">
-        <a href="#top" className="font-serif text-lg leading-none text-ink">
+        <a href="/" className="font-serif text-lg leading-none text-ink">
           Tobi John Olabode
           <span className="mt-1 block text-xs font-sans font-medium uppercase tracking-widest text-muted">
             FinOps · Wales
@@ -52,7 +55,11 @@ export function SiteHeader() {
               {link.label}
             </a>
           ))}
-          <a href={blogLink.href} className="inline-flex min-h-11 items-center px-3 text-sm text-ink">
+          <a
+            href={blogLink.href}
+            aria-current={onBlog ? "page" : undefined}
+            className={`inline-flex min-h-11 items-center px-3 text-sm ${onBlog ? "text-accent" : "text-ink"}`}
+          >
             {blogLink.label}
           </a>
         </nav>
@@ -90,7 +97,8 @@ export function SiteHeader() {
           ))}
           <a
             href={blogLink.href}
-            className="flex min-h-11 items-center text-base text-ink"
+            aria-current={onBlog ? "page" : undefined}
+            className={`flex min-h-11 items-center text-base ${onBlog ? "text-accent" : "text-ink"}`}
             onClick={() => setOpen(false)}
           >
             {blogLink.label}
