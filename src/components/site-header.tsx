@@ -3,10 +3,10 @@ import { useLocation } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 
 const links = [
-  { href: "#work", id: "work", label: "Work" },
-  { href: "#about", id: "about", label: "About" },
-  { href: "#skills", id: "skills", label: "Skills" },
-  { href: "#contact", id: "contact", label: "Contact" },
+  { href: "/#work", id: "work", label: "Work" },
+  { href: "/#about", id: "about", label: "About" },
+  { href: "/#skills", id: "skills", label: "Skills" },
+  { href: "/#contact", id: "contact", label: "Contact" },
 ] as const;
 
 const blogLink = { href: "/blog", label: "Writing" };
@@ -65,7 +65,7 @@ export function SiteHeader() {
         </nav>
 
         <a
-          href="#contact"
+          href="/#contact"
           className="hidden min-h-11 items-center bg-ink px-4 text-sm font-medium text-paper transition-transform duration-150 ease-out active:scale-[0.96] md:inline-flex"
         >
           Write
