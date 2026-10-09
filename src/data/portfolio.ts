@@ -184,6 +184,27 @@ export const projects: Project[] = [
     outcome: "95% allocation accuracy",
     summary:
       "At Taylor & Eyre, tagging policies and service control policies lifted allocation accuracy to 95%. At Next, product tags and showback give shared platforms an owner instead of a communal bill.",
+    thumbnail: `<svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect width="480" height="220" fill="#f3efe6"/>
+      <text x="20" y="30" fill="#6b6560" font-size="9" font-family="sans-serif" letter-spacing="1.5">ALLOCATION ACCURACY</text>
+      <text x="20" y="55" fill="#1c1915" font-size="28" font-weight="700" font-family="serif">95%</text>
+      <text x="120" y="30" fill="#6b6560" font-size="9" font-family="sans-serif" letter-spacing="1.5">TAGGED RESOURCES</text>
+      <text x="120" y="55" fill="#9a341f" font-size="28" font-weight="700" font-family="serif">9,400+</text>
+      <line x1="20" y1="68" x2="460" y2="68" stroke="#1c191520" stroke-width="1"/>
+      <text x="20" y="90" fill="#6b6560" font-size="8" font-family="sans-serif" letter-spacing="1">COST CENTRE COVERAGE</text>
+      <rect x="20" y="97" width="380" height="10" rx="2" fill="#e7e1d4"/>
+      <rect x="20" y="97" width="361" height="10" rx="2" fill="#9a341f" opacity="0.85"/>
+      <text x="406" y="107" fill="#9a341f" font-size="9" font-family="sans-serif" font-weight="600">95%</text>
+      <text x="20" y="127" fill="#6b6560" font-size="8" font-family="sans-serif" letter-spacing="1">OWNER TAG COVERAGE</text>
+      <rect x="20" y="134" width="380" height="10" rx="2" fill="#e7e1d4"/>
+      <rect x="20" y="134" width="342" height="10" rx="2" fill="#9a341f" opacity="0.7"/>
+      <text x="406" y="144" fill="#9a341f" font-size="9" font-family="sans-serif" font-weight="600">90%</text>
+      <text x="20" y="164" fill="#6b6560" font-size="8" font-family="sans-serif" letter-spacing="1">ENVIRONMENT TAG COVERAGE</text>
+      <rect x="20" y="171" width="380" height="10" rx="2" fill="#e7e1d4"/>
+      <rect x="20" y="171" width="323" height="10" rx="2" fill="#9a341f" opacity="0.55"/>
+      <text x="406" y="181" fill="#9a341f" font-size="9" font-family="sans-serif" font-weight="600">85%</text>
+      <text x="20" y="212" fill="#6b6560" font-size="8" font-family="sans-serif">Azure Policy · AWS SCPs · showback · chargeback · enforcement automation</text>
+    </svg>`,
   },
   {
     id: "automation",

@@ -1,7 +1,7 @@
 export function Hero() {
   const figures = [
     { value: "6+", label: "Years in FinOps" },
-    { value: "33.3%", label: "Cloud spend reduced" },
+    { value: "33.3%", label: "Cloud waste cut" },
     { value: "3", label: "Clouds in practice" },
     { value: "50+", label: "Engineers trained" },
   ];
