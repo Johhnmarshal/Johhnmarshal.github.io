@@ -3,6 +3,8 @@ import { ArrowUpRight } from "lucide-react";
 import { z } from "zod";
 import { EMAIL, socials } from "@/data/portfolio";
 
+const FORMSUBMIT_URL = `https://formsubmit.co/ajax/${EMAIL}`;
+
 const noteSchema = z.object({
   name: z.string().trim().min(2, "Please add your name."),
   email: z.string().trim().min(1, "Please add an email.").email("That email does not look right."),
@@ -18,6 +20,8 @@ export function Contact() {
   const [fields, setFields] = useState<Fields>(empty);
   const [errors, setErrors] = useState<Errors>({});
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [sendError, setSendError] = useState(false);
   const [copied, setCopied] = useState(false);
 
   function update(key: keyof Fields, value: string) {
@@ -25,7 +29,7 @@ export function Contact() {
     setErrors((current) => ({ ...current, [key]: undefined }));
   }
 
-  function onSubmit(event: FormEvent<HTMLFormElement>) {
+  async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const parsed = noteSchema.safeParse(fields);
     if (!parsed.success) {
@@ -38,12 +42,33 @@ export function Contact() {
       return;
     }
 
-    const subject = encodeURIComponent(`Note from ${parsed.data.name}`);
-    const body = encodeURIComponent(
-      `${parsed.data.message}\n\n— ${parsed.data.name}\n${parsed.data.email}`,
-    );
-    window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
-    setSent(true);
+    setSending(true);
+    setSendError(false);
+
+    const formData = new FormData();
+    formData.append("name", parsed.data.name);
+    formData.append("email", parsed.data.email);
+    formData.append("message", parsed.data.message);
+    formData.append("_subject", `Note from ${parsed.data.name}`);
+    formData.append("_captcha", "false");
+
+    try {
+      const res = await fetch(FORMSUBMIT_URL, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: formData,
+      });
+      const data = await res.json() as { success: string };
+      if (data.success === "true" || data.success === true) {
+        setSent(true);
+      } else {
+        setSendError(true);
+      }
+    } catch {
+      setSendError(true);
+    } finally {
+      setSending(false);
+    }
   }
 
   async function copyEmail() {
@@ -64,7 +89,7 @@ export function Contact() {
             A short note is enough.
           </h2>
           <p className="mt-4 max-w-sm text-muted">
-            The form opens a draft in your mail app. Nothing is stored on this site.
+            Sends directly to my inbox. Nothing is stored on this site.
           </p>
           <a href={`mailto:${EMAIL}`} className="mt-6 inline-block font-serif text-2xl text-ink underline decoration-line underline-offset-4">
             {EMAIL}
@@ -96,13 +121,13 @@ export function Contact() {
         <div className="border border-line bg-paper-2 p-6 md:col-span-7 md:p-8">
           {sent ? (
             <div>
-              <p className="font-serif text-3xl text-ink">Draft ready.</p>
+              <p className="font-serif text-3xl text-ink">Sent.</p>
               <p className="mt-3 max-w-md text-muted">
-                Your mail app should be holding the note. If nothing opened, write directly to {EMAIL}.
+                Your note is in my inbox. I'll get back to you shortly.
               </p>
               <button
                 type="button"
-                onClick={() => setSent(false)}
+                onClick={() => { setSent(false); setSendError(false); }}
                 className="mt-6 inline-flex min-h-11 items-center bg-ink px-5 text-sm font-medium text-paper transition-transform duration-150 ease-out active:scale-[0.96]"
               >
                 Write another
@@ -135,11 +160,18 @@ export function Contact() {
                 multiline
                 onChange={(value) => update("message", value)}
               />
+              {sendError ? (
+                <p role="alert" className="mt-4 text-sm text-accent">
+                  Something went wrong — please write directly to{" "}
+                  <a href={`mailto:${EMAIL}`} className="underline">{EMAIL}</a>.
+                </p>
+              ) : null}
               <button
                 type="submit"
-                className="mt-8 inline-flex min-h-11 items-center bg-ink px-5 text-sm font-medium text-paper transition-transform duration-150 ease-out active:scale-[0.96]"
+                disabled={sending}
+                className="mt-8 inline-flex min-h-11 items-center bg-ink px-5 text-sm font-medium text-paper transition-transform duration-150 ease-out active:scale-[0.96] disabled:opacity-50"
               >
-                Open mail draft
+                {sending ? "Sending…" : "Send message"}
               </button>
             </form>
           )}
