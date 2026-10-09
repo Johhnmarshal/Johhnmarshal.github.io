@@ -43,9 +43,9 @@ export const projects: Project[] = [
     title: "Multi-cloud executive dashboard",
     category: "Dashboards",
     context: "Next · Azure & GCP",
-    outcome: "£16.7m tracked · 26.17% ESR",
+    outcome: "£16.7m tracked · 33.3% ESR",
     summary:
-      "One view of executive cloud spend across subscriptions, services and commitment discounts. Effective cost set against realised savings — £8.35m recovered at 26.17% effective savings rate — down to resource group. Built in Power BI against Azure Cost Management and GCP Billing exports.",
+      "One view of executive cloud spend across subscriptions, services and commitment discounts. Effective cost set against realised savings — £8.35m recovered at 33.3% effective savings rate — down to resource group. Built in Power BI against Azure Cost Management and GCP Billing exports.",
     thumbnail: `<svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <rect width="480" height="220" fill="#f3efe6"/>
       <text x="20" y="30" fill="#6b6560" font-size="9" font-family="sans-serif" letter-spacing="1.5">EFFECTIVE COST</text>
@@ -53,7 +53,7 @@ export const projects: Project[] = [
       <text x="170" y="30" fill="#6b6560" font-size="9" font-family="sans-serif" letter-spacing="1.5">TOTAL SAVINGS</text>
       <text x="170" y="50" fill="#9a341f" font-size="22" font-weight="700" font-family="serif">£8.35M</text>
       <text x="340" y="30" fill="#6b6560" font-size="9" font-family="sans-serif" letter-spacing="1.5">ESR</text>
-      <text x="340" y="50" fill="#9a341f" font-size="22" font-weight="700" font-family="serif">26.17%</text>
+      <text x="340" y="50" fill="#9a341f" font-size="22" font-weight="700" font-family="serif">33.3%</text>
       <line x1="20" y1="68" x2="460" y2="68" stroke="#1c191520" stroke-width="1"/>
       <defs>
         <linearGradient id="g1" x1="0" x2="0" y1="0" y2="1">
