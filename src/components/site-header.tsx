@@ -35,7 +35,7 @@ export function SiteHeader() {
   return (
     <header id="top" className="sticky top-0 z-40 border-b border-line bg-paper/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3 md:px-8">
-        <a href="#top" className="font-serif text-lg leading-none text-ink">
+        <a href="/" className="font-serif text-lg leading-none text-ink">
           Tobi John Olabode
           <span className="mt-1 block text-xs font-sans font-medium uppercase tracking-widest text-muted">
             FinOps · Wales
